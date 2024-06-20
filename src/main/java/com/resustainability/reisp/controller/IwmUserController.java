@@ -24,7 +24,7 @@ public class IwmUserController {
     }
 	Logger logger = Logger.getLogger(IrisSbuController.class);
 	
-	@RequestMapping(value = "/iwm-User", method = {RequestMethod.POST, RequestMethod.GET})
+	@RequestMapping(value = "/nagpurCND-User", method = {RequestMethod.POST, RequestMethod.GET})
 	public ModelAndView iwmuser(@ModelAttribute User user, HttpSession session) {
 		ModelAndView model = new ModelAndView(PageConstants.iwmuser);
 		SBU obj = null;

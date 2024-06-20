@@ -13,31 +13,31 @@
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
     <title>Login Page </title>
-    <link rel="apple-touch-icon" href="/iwm/resources/images/ico/apple-icon-120.html">
+    <link rel="apple-touch-icon" href="/nagpurCND/resources/images/ico/apple-icon-120.html">
     <link rel="shortcut icon" type="image/x-icon" href="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
-    <link rel="stylesheet" type="text/css" href="/iwm/resources/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/vendors/css/vendors.min.css">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="/iwm/resources/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources/css/bootstrap-extended.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources/css/colors.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources/css/components.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources/css/themes/dark-layout.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources/css/themes/bordered-layout.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources/css/themes/semi-dark-layout.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/bootstrap-extended.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/colors.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/components.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/themes/dark-layout.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/themes/bordered-layout.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/themes/semi-dark-layout.min.css">
 
     <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="/iwm/resources/css/core/menu/menu-types/horizontal-menu.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources/css/plugins/forms/form-validation.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources/css/pages/authentication.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/core/menu/menu-types/horizontal-menu.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/plugins/forms/form-validation.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/pages/authentication.css">
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="/iwm/resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/style.css">
     <!-- END: Custom CSS-->
 
   </head>
@@ -125,21 +125,21 @@
 
 
     <!-- BEGIN: Vendor JS-->
-    <script src="/iwm/resources/vendors/js/vendors.min.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/vendors.min.js"></script>
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
-    <script src="/iwm/resources/vendors/js/ui/jquery.sticky.js"></script>
-    <script src="/iwm/resources/vendors/js/forms/validation/jquery.validate.min.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/ui/jquery.sticky.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/forms/validation/jquery.validate.min.js"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
-    <script src="/iwm/resources/js/core/app-menu.min.js"></script>
-    <script src="/iwm/resources/js/core/app.min.js"></script>
+    <script src="/nagpurCND/resources/js/core/app-menu.min.js"></script>
+    <script src="/nagpurCND/resources/js/core/app.min.js"></script>
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
-    <script src="/iwm/resources/js/scripts/pages/auth-login.js"></script>
+    <script src="/nagpurCND/resources/js/scripts/pages/auth-login.js"></script>
     <!-- END: Page JS-->
 
     <script>

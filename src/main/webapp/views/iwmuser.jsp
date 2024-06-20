@@ -9,37 +9,37 @@
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
     <title>User</title>
-    <link rel="apple-touch-icon" href="/iwm/resources//images/ico/apple-icon-120.html">
-    <link rel="shortcut icon" type="image/x-icon" href="/iwm/resources/images/logo/logo.svg">
+    <link rel="apple-touch-icon" href="/nagpurCND/resources//images/ico/apple-icon-120.html">
+    <link rel="shortcut icon" type="image/x-icon" href="/nagpurCND/resources/images/logo/logo.svg">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
-     <link rel="stylesheet" type="text/css" href="/iwm/resources/vendors/css/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources/vendors/css/forms/select/select2.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//vendors/css/tables/datatable/dataTables.bootstrap5.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//vendors/css/tables/datatable/responsive.bootstrap5.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//vendors/css/tables/datatable/buttons.bootstrap5.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//vendors/css/tables/datatable/rowGroup.bootstrap5.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//vendors/css/pickers/flatpickr/flatpickr.min.css">
+     <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/vendors/css/forms/select/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//vendors/css/tables/datatable/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//vendors/css/tables/datatable/responsive.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//vendors/css/tables/datatable/buttons.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//vendors/css/tables/datatable/rowGroup.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//vendors/css/pickers/flatpickr/flatpickr.min.css">
     <!-- END: Vendor CSS-->
-  <link rel="stylesheet" type="text/css" href="/iwm/resources/css/plugins/forms/form-validation.css">
+  <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/plugins/forms/form-validation.css">
     <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//css/bootstrap-extended.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//css/colors.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//css/components.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//css/themes/dark-layout.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//css/themes/bordered-layout.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//css/themes/semi-dark-layout.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/bootstrap-extended.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/colors.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/components.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/themes/dark-layout.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/themes/bordered-layout.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/themes/semi-dark-layout.min.css">
 
     <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//css/core/menu/menu-types/vertical-menu.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/core/menu/menu-types/vertical-menu.min.css">
     <!-- END: Page CSS-->
-  <link rel="stylesheet" type="text/css" href="/iwm/resources/css/plugins/forms/pickers/form-flat-pickr.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources/css/plugins/forms/pickers/form-pickadate.min.css">
+  <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/plugins/forms/pickers/form-flat-pickr.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/plugins/forms/pickers/form-pickadate.min.css">
     <!-- END: Page CSS-->
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//assets/css/style.css">
     <!-- END: Custom CSS-->
 <style>
 td{
@@ -81,15 +81,8 @@ font-size: 1rem!important;
           <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
               <div class="col-12">
-                <h2 class="content-header-title float-start mb-0">IWM Customer Data</h2>
-                <div class="breadcrumb-wrapper">
-                  <ol class="breadcrumb">
-                  
-                    <li class="breadcrumb-item"><a>Customer Data</a>
-                    </li>
-                   
-                  </ol>
-                </div>
+                <h2 class="content-header-title float-start mb-0">Users</h2>
+                
               </div>
             </div>
           </div>
@@ -151,7 +144,7 @@ font-size: 1rem!important;
 										</div>
 										<div>
 											<div class="dt-buttons d-inline-flex">
-											 <a href="<%=request.getContextPath() %>/iwm-adduser" type="button" class="btn btn-gradient-danger re-text-bg m-1"><i data-feather='user-plus'></i> Add New Customer</a> 
+											 <a href="<%=request.getContextPath() %>/nagpurCND-adduser" type="button" class="btn btn-gradient-danger re-text-bg m-1"><i data-feather='user-plus'></i> Add New User</a> 
 										
 					  </div>
 					 </div>
@@ -191,12 +184,12 @@ font-size: 1rem!important;
     <button class="btn btn-primary btn-icon scroll-top waves-effect waves-float waves-light" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></button>
    
    
-     <script src="/iwm/resources/vendors/js/vendors.min.js"></script>
-     <script src="/iwm/resources/vendors/js/forms/select/select2.full.min.js"></script>
+     <script src="/nagpurCND/resources/vendors/js/vendors.min.js"></script>
+     <script src="/nagpurCND/resources/vendors/js/forms/select/select2.full.min.js"></script>
   
-     <script src="/iwm/resources/js/scripts/forms/form-validation.js"></script>
+     <script src="/nagpurCND/resources/js/scripts/forms/form-validation.js"></script>
     <!-- BEGIN Vendor JS--> 
-    <script src="/iwm/resources/vendors/js/forms/validation/jquery.validate.min.js"></script> 
+    <script src="/nagpurCND/resources/vendors/js/forms/validation/jquery.validate.min.js"></script> 
 
 
 
@@ -207,44 +200,44 @@ font-size: 1rem!important;
 
 
     <!-- BEGIN: Page Vendor JS-->
-    <script src="/iwm/resources//vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
-    <script src="/iwm/resources//vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
-    <script src="/iwm/resources//vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
-    <script src="/iwm/resources//vendors/js/tables/datatable/responsive.bootstrap5.min.js"></script>
-    <script src="/iwm/resources//vendors/js/tables/datatable/datatables.checkboxes.min.js"></script>
-    <script src="/iwm/resources//vendors/js/tables/datatable/datatables.buttons.min.js"></script>
-    <script src="/iwm/resources//vendors/js/tables/datatable/jszip.min.js"></script>
-    <script src="/iwm/resources//vendors/js/tables/datatable/pdfmake.min.js"></script>
-    <script src="/iwm/resources//vendors/js/tables/datatable/vfs_fonts.js"></script>
-    <script src="/iwm/resources//vendors/js/tables/datatable/buttons.html5.min.js"></script>
-    <script src="/iwm/resources//vendors/js/tables/datatable/buttons.print.min.js"></script>
-    <script src="/iwm/resources//vendors/js/tables/datatable/dataTables.rowGroup.min.js"></script>
-    <script src="/iwm/resources//vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/responsive.bootstrap5.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/datatables.checkboxes.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/datatables.buttons.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/jszip.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/pdfmake.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/vfs_fonts.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/buttons.html5.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/buttons.print.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/dataTables.rowGroup.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
     <!-- END: Page Vendor JS-->
-      <script src="/iwm/resources/js2/dataTables.material.min.js"  ></script>
-          <script src="/iwm/resources/js2/jquery.dataTables-v.1.10.min.js"  ></script>
-              <script src="/iwm/resources/vendors/js/extensions/moment.min.js"></script>
-    <script src="/iwm/resources/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
-    <script src="/iwm/resources/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
-    <script src="/iwm/resources/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
-    <script src="/iwm/resources/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
-    <script src="/iwm/resources/vendors/js/tables/datatable/responsive.bootstrap5.js"></script>
+      <script src="/nagpurCND/resources/js2/dataTables.material.min.js"  ></script>
+          <script src="/nagpurCND/resources/js2/jquery.dataTables-v.1.10.min.js"  ></script>
+              <script src="/nagpurCND/resources/vendors/js/extensions/moment.min.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/tables/datatable/responsive.bootstrap5.js"></script>
     <!-- BEGIN: Theme JS-->
-     <script src="/iwm/resources/js/scripts/components/components-bs-toast.min.js"></script>
-    <script src="/iwm/resources//js/core/app-menu.min.js"></script>
-    <script src="/iwm/resources//js/core/app.min.js"></script>
-    <script src="/iwm/resources//js/scripts/customizer.min.js"></script>
+     <script src="/nagpurCND/resources/js/scripts/components/components-bs-toast.min.js"></script>
+    <script src="/nagpurCND/resources//js/core/app-menu.min.js"></script>
+    <script src="/nagpurCND/resources//js/core/app.min.js"></script>
+    <script src="/nagpurCND/resources//js/scripts/customizer.min.js"></script>
     <!-- END: Theme JS-->
-     <script src="/iwm/resources/js2/datetime-moment-v1.10.12.js"  ></script>
+     <script src="/nagpurCND/resources/js2/datetime-moment-v1.10.12.js"  ></script>
     <!-- BEGIN: Page JS-->
-    <script src="/iwm/resources//js/scripts/tables/table-datatables-basic.min.js"></script>
+    <script src="/nagpurCND/resources//js/scripts/tables/table-datatables-basic.min.js"></script>
     <!-- END: Page JS-->
-    <script src="/iwm/resources/vendors/js/pickers/pickadate/picker.js"></script>
-    <script src="/iwm/resources/vendors/js/pickers/pickadate/picker.date.js"></script>
-    <script src="/iwm/resources/vendors/js/pickers/pickadate/picker.time.js"></script>
-    <script src="/iwm/resources/vendors/js/pickers/pickadate/legacy.js"></script>
-    <script src="/iwm/resources/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
-        <script src="/iwm/resources/js/scripts/forms/pickers/form-pickers.min.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/pickers/pickadate/picker.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/pickers/pickadate/picker.date.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/pickers/pickadate/picker.time.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/pickers/pickadate/legacy.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+        <script src="/nagpurCND/resources/js/scripts/forms/pickers/form-pickers.min.js"></script>
          <form id="getUser" class="row gy-1 pt-75" action="<%=request.getContextPath() %>/get-user-details" method="post" class="form-horizontal" role="form" >
          	  <input type="hidden" id="idVal" name="user_id"  />
          </form>
@@ -459,7 +452,7 @@ font-size: 1rem!important;
 							},
 							
 							"bDestroy" : true,
-							"sAjaxSource" : "	<%=request.getContextPath()%>/ajax/get-users-iwm?"+myParams,
+							"sAjaxSource" : "	<%=request.getContextPath()%>/ajax/get-users-nagpurCND?"+myParams,
 		        "aoColumns": [
 		        	 { "mData": function(data,type,row){
                       if($.trim(data.user_id) == ''){ return '-'; }else{ return i++ ; }

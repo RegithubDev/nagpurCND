@@ -28,7 +28,7 @@ div.main-menu-content {
       <div class="navbar-header expanded">
         <ul class="nav navbar-nav flex-row">
           <li class="nav-item me-auto"><a class=" nav-item" href="<%=request.getContextPath() %>/home"><span class="">
-              		<img src="/iwm/resources/images/logo/logo.svg" class="logo" style="
+              		<img src="/nagpurCND/resources/images/logo/logo.svg" class="logo" style="
     width: 10rem;"></span>
               </a></li>
           <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pe-0" data-bs-toggle="collapse">
@@ -42,11 +42,11 @@ div.main-menu-content {
 
 				<li class=" nav-item bghover active" id="home"><a class="d-flex align-items-center"
 					href="<%=request.getContextPath() %>/home"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="HomeOutlinedIcon"><path d="m12 5.69 5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3 2 12h3v8h6v-6h2v6h6v-8h3L12 3z"></path></svg><span
-				     		class="menu-title text-truncate" data-i18n="Email">Home</span></a></li>
+				     		class="menu-title text-truncate" data-i18n="Email">Dashboard</span></a></li>
 				
 				 <c:if test="${sessionScope.BASE_ROLE eq 'Admin'}">
 					<li class=" nav-item bghover" id="settings"><a class="d-flex align-items-center"
-						href="<%=request.getContextPath() %>/iwm-User"><i data-feather='settings'></i><span
+						href="<%=request.getContextPath() %>/nagpurCND-User"><i data-feather='settings'></i><span
 						class="menu-title text-truncate " data-i18n="Calendar">User</span></a>
 					</li>
 				</c:if>

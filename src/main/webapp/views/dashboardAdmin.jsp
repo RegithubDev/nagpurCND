@@ -8,40 +8,56 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Home</title>
-    <link rel="apple-touch-icon" href="/iwm/resources//images/ico/apple-icon-120.html">
-    <link rel="shortcut icon" type="image/x-icon" href="/iwm/resources/images/logo/logo.svg">
+    <title>Dashboard</title>
+    <link rel="apple-touch-icon" href="/nagpurCND/resources//images/ico/apple-icon-120.html">
+    <link rel="shortcut icon" type="image/x-icon" href="/nagpurCND/resources/images/logo/logo.svg">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- BEGIN: Vendor CSS-->
-     <link rel="stylesheet" type="text/css" href="/iwm/resources/vendors/css/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources/vendors/css/forms/select/select2.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//vendors/css/tables/datatable/dataTables.bootstrap5.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//vendors/css/tables/datatable/responsive.bootstrap5.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//vendors/css/tables/datatable/buttons.bootstrap5.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//vendors/css/tables/datatable/rowGroup.bootstrap5.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//vendors/css/pickers/flatpickr/flatpickr.min.css">
+     <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/vendors/css/forms/select/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//vendors/css/tables/datatable/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//vendors/css/tables/datatable/responsive.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//vendors/css/tables/datatable/buttons.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//vendors/css/tables/datatable/rowGroup.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//vendors/css/pickers/flatpickr/flatpickr.min.css">
     <!-- END: Vendor CSS-->
-  <link rel="stylesheet" type="text/css" href="/iwm/resources/css/plugins/forms/form-validation.css">
+  <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/plugins/forms/form-validation.css">
     <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//css/bootstrap-extended.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//css/colors.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//css/components.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//css/themes/dark-layout.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//css/themes/bordered-layout.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//css/themes/semi-dark-layout.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/bootstrap-extended.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/colors.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/components.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/themes/dark-layout.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/themes/bordered-layout.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/themes/semi-dark-layout.min.css">
 
     <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//css/core/menu/menu-types/vertical-menu.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/core/menu/menu-types/vertical-menu.min.css">
     <!-- END: Page CSS-->
-  <link rel="stylesheet" type="text/css" href="/iwm/resources/css/plugins/forms/pickers/form-flat-pickr.min.css">
-    <link rel="stylesheet" type="text/css" href="/iwm/resources/css/plugins/forms/pickers/form-pickadate.min.css">
+  <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/plugins/forms/pickers/form-flat-pickr.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/plugins/forms/pickers/form-pickadate.min.css">
     <!-- END: Page CSS-->
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="/iwm/resources//assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//assets/css/style.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- END: Custom CSS-->
 <style>
+ #card-box {
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      background-color: #f9f9f9;
+      max-width: 800px; /* To center the box and limit its width */
+    }
+    #card-box .card {
+      margin: 10px 0;
+    }
+      #card-box .card:hover {
+      transform: scale(1.05); /* Slightly enlarge the card on hover */
+      background-color: #2c9faf; /* Change background color on hover */
+    }
 td{
 font-size: 1rem!important;
 }
@@ -81,15 +97,8 @@ font-size: 1rem!important;
           <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
               <div class="col-12">
-                <h2 class="content-header-title float-start mb-0">IWM Transaction Data</h2>
-                <div class="breadcrumb-wrapper">
-                  <ol class="breadcrumb">
-                  
-                    <li class="breadcrumb-item"><span class="badge bg-dark">IWM</span>
-                    </li>
-                   
-                  </ol>
-                </div>
+                <h2 class="content-header-title float-start mb-0"><span class="badge bg-dark">Nagpur-CND <span class="badge badge-glow bg-info">DASHBOARD</span></span></h2>
+                
               </div>
             </div>
           </div>
@@ -99,86 +108,37 @@ font-size: 1rem!important;
             </div>
           </div>
         </div>
-<section id="complex-header-datatable">
-          <div class="content-wrapper container-xxl p-0">
-         <!--    <div class="content-header row">
-									            <div class="sidebar-toggle d-block d-lg-none ms-1">
-											      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu font-medium-5"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-											    </div>
-            </div> -->
-            <div class="content-body"><div class="body-content-overlay"></div>
-            
-            
-           <div class="card-body" id="filterDiv">
-          <div class="row">
-          
-       <div class="col-xl-2 col-md-6 col-12" style="
-    width: 16rem;
-    /* padding-right: calc(var(--bs-gutter-x) * 0); */
-    ">
-           <div class="mb-1">
-              <label class="form-label" for="select2-basic">Site</label>
-              <div class="position-relative" >
-              <select  class="searchable form-select " id="Werks_plant" name="Werks_plant" data-select2-id="select2-basic1" tabindex="1" aria-hidden="true">
-                <option value="" >Select Site</option>
-               
-              </select>
-              </div></div>
-            </div>  
-           <div class="col-md-6 mb-1"style="
-    width: 16rem;">
-          <label class="form-label" for="fp-default">From</label>
-          <input type="text" id="from_date"  name="from_date" class="form-control flatpickr-basic flatpickr-input active" placeholder="YYYY-MM-DD" readonly="readonly">
+ <section id="card-style-variation">
+  <div id="card-box" class="container">
+    <!-- Card Row -->
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-xl-4 mb-4">
+        <div class="card text-center shadow-lg" style="background-color: #007bff; color: #ffffff; border-radius: 10px;">
+          <div class="card-body">
+            <h4 class="card-title"><i data-feather='trello'></i><span style="text-decoration: underline; color: white;">Daily Report</span></h4>
+            <p class="card-text">Summary of yearly activities and statistics.</p>
+            <ul class="list-unstyled">
+              <li><strong>Visits:</strong> 2,880,000</li>
+            </ul>
+          </div>
         </div>
-         <div class="col-md-6 mb-1" style="
-    width: 16rem;">
-          <label class="form-label" for="fp-default">To</label>
-          <input type="text" id="to_date"  name="to_date" class="form-control flatpickr-basic flatpickr-input active" placeholder="YYYY-MM-DD" readonly="readonly">
+      </div>
+      <div class="col-md-6 col-xl-4 mb-4">
+        <div class="card text-center shadow-lg" style="background-color: #dc3545; color: #ffffff; border-radius: 10px;">
+          <div class="card-body">
+            <h4 class="card-title"><i data-feather='trello'></i><span style="text-decoration: underline; color: white;">Monthly Report</span></h4>
+            <p class="card-text">Summary of monthly activities and statistics.</p>
+            <ul class="list-unstyled">
+              <li><strong>New Users:</strong> 36,000</li>
+            </ul>
+          </div>
         </div>
-            <div class="re-text col-xl-4 col-md-3 col-12" >
-             <div class="demo-inline-spacing">
-            <a type="button" class="btn btn-gradient-danger re-text-bg" onclick="getIWMList();"><i data-feather='search'></i> Filter </a>
-           <a  onclick="clearFilters();" id="clearFilterBtn"  class="btn btn-gradient-danger re-text-bg "> Clear Filter </a> 
-          </div>
-            </div>
-           
-          </div>
-        </div> 
-        <div class="toast-container position-fixed top-0 end-0 p-2" style="z-index: 15">
-  
+      </div>
+    </div>
+  </div>
+</section>
 
- 
-</div>
-            <br>
-<div class="col-12" id="bigDiv">
 
-      <div class="card" style="border: 1px solid black;padding: 4px;">
-								<div >
-									
-					 <table id="datatable-iwm" class="invoice-list-table table">
-				            <thead>
-				              <tr>
-				                <th >#</th>
-				                <th >IWMA NO.</th>
-				                <th >Manifest No</th>
-								<th >CUSTOMER</th>
-								<th >Plant Name</th>
-								<th >DATE</th>
-							 <!-- <th >WASTE NAME</th> -->
-								<th >WASTE NAME</th>
-								<th >QTY IN KG</th>
-								<!-- <th >DISPOSAL METHODS</th> -->
-								
-             				</tr>
-			            </thead>
-			          </table>
-					</div>
-				</div>
-    		</div>
-            </div>
-          </div>
-	</section>
-	 
     </div>
   </div>
 </div>
@@ -189,68 +149,70 @@ font-size: 1rem!important;
     <footer class="footer footer-static footer-light">
       <p class="clearfix mb-0"><span class="float-md-start d-block d-md-inline-block mt-25">COPYRIGHT  &copy;  <span id="currentYear"></span> ,| Powered by<a class="ms-25" href="https://ramkyenviroengineers.com/" target="_blank">Re Sustainability Limited</a><span class="d-none d-sm-inline-block"> . All Rights Reserved.</span></span></p>
     </footer>
-    <button class="btn btn-primary btn-icon scroll-top waves-effect waves-float waves-light" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></button>
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></button>
    
    
-     <script src="/iwm/resources/vendors/js/vendors.min.js"></script>
-     <script src="/iwm/resources/vendors/js/forms/select/select2.full.min.js"></script>
+     <script src="/nagpurCND/resources/vendors/js/vendors.min.js"></script>
+     <script src="/nagpurCND/resources/vendors/js/forms/select/select2.full.min.js"></script>
   
-     <script src="/iwm/resources/js/scripts/forms/form-validation.js"></script>
+     <script src="/nagpurCND/resources/js/scripts/forms/form-validation.js"></script>
     <!-- BEGIN Vendor JS--> 
-    <script src="/iwm/resources/vendors/js/forms/validation/jquery.validate.min.js"></script> 
+    <script src="/nagpurCND/resources/vendors/js/forms/validation/jquery.validate.min.js"></script> 
 
 
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
 
     <!-- BEGIN: Page Vendor JS-->
-    <script src="/iwm/resources//vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
-    <script src="/iwm/resources//vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
-    <script src="/iwm/resources//vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
-    <script src="/iwm/resources//vendors/js/tables/datatable/responsive.bootstrap5.min.js"></script>
-    <script src="/iwm/resources//vendors/js/tables/datatable/datatables.checkboxes.min.js"></script>
-    <script src="/iwm/resources//vendors/js/tables/datatable/datatables.buttons.min.js"></script>
-    <script src="/iwm/resources//vendors/js/tables/datatable/jszip.min.js"></script>
-    <script src="/iwm/resources//vendors/js/tables/datatable/pdfmake.min.js"></script>
-    <script src="/iwm/resources//vendors/js/tables/datatable/vfs_fonts.js"></script>
-    <script src="/iwm/resources//vendors/js/tables/datatable/buttons.html5.min.js"></script>
-    <script src="/iwm/resources//vendors/js/tables/datatable/buttons.print.min.js"></script>
-    <script src="/iwm/resources//vendors/js/tables/datatable/dataTables.rowGroup.min.js"></script>
-    <script src="/iwm/resources//vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/responsive.bootstrap5.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/datatables.checkboxes.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/datatables.buttons.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/jszip.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/pdfmake.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/vfs_fonts.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/buttons.html5.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/buttons.print.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/dataTables.rowGroup.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
     <!-- END: Page Vendor JS-->
-      <script src="/iwm/resources/js2/dataTables.material.min.js"  ></script>
-          <script src="/iwm/resources/js2/jquery.dataTables-v.1.10.min.js"  ></script>
-              <script src="/iwm/resources/vendors/js/extensions/moment.min.js"></script>
-    <script src="/iwm/resources/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
-    <script src="/iwm/resources/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
-    <script src="/iwm/resources/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
-    <script src="/iwm/resources/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
-    <script src="/iwm/resources/vendors/js/tables/datatable/responsive.bootstrap5.js"></script>
+      <script src="/nagpurCND/resources/js2/dataTables.material.min.js"  ></script>
+          <script src="/nagpurCND/resources/js2/jquery.dataTables-v.1.10.min.js"  ></script>
+              <script src="/nagpurCND/resources/vendors/js/extensions/moment.min.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/tables/datatable/responsive.bootstrap5.js"></script>
     <!-- BEGIN: Theme JS-->
-     <script src="/iwm/resources/js/scripts/components/components-bs-toast.min.js"></script>
-    <script src="/iwm/resources//js/core/app-menu.min.js"></script>
-    <script src="/iwm/resources//js/core/app.min.js"></script>
-    <script src="/iwm/resources//js/scripts/customizer.min.js"></script>
+     <script src="/nagpurCND/resources/js/scripts/components/components-bs-toast.min.js"></script>
+    <script src="/nagpurCND/resources//js/core/app-menu.min.js"></script>
+    <script src="/nagpurCND/resources//js/core/app.min.js"></script>
+    <script src="/nagpurCND/resources//js/scripts/customizer.min.js"></script>
     <!-- END: Theme JS-->
-     <script src="/iwm/resources/js2/datetime-moment-v1.10.12.js"  ></script>
+     <script src="/nagpurCND/resources/js2/datetime-moment-v1.10.12.js"  ></script>
     <!-- BEGIN: Page JS-->
-    <script src="/iwm/resources//js/scripts/tables/table-datatables-basic.min.js"></script>
+    <script src="/nagpurCND/resources//js/scripts/tables/table-datatables-basic.min.js"></script>
     <!-- END: Page JS-->
-    <script src="/iwm/resources/vendors/js/pickers/pickadate/picker.js"></script>
-    <script src="/iwm/resources/vendors/js/pickers/pickadate/picker.date.js"></script>
-    <script src="/iwm/resources/vendors/js/pickers/pickadate/picker.time.js"></script>
-    <script src="/iwm/resources/vendors/js/pickers/pickadate/legacy.js"></script>
-    <script src="/iwm/resources/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
-        <script src="/iwm/resources/js/scripts/forms/pickers/form-pickers.min.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/pickers/pickadate/picker.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/pickers/pickadate/picker.date.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/pickers/pickadate/picker.time.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/pickers/pickadate/legacy.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+        <script src="/nagpurCND/resources/js/scripts/forms/pickers/form-pickers.min.js"></script>
          
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         
         
-         <form id="getIWM" class="row gy-1 pt-75" action="<%=request.getContextPath() %>/get-iwm-details" method="post" class="form-horizontal" role="form" >
+         <form id="getIWM" class="row gy-1 pt-75" action="<%=request.getContextPath() %>/get-nagpurCND-details" method="post" class="form-horizontal" role="form" >
          	  <input type="hidden" id="idVal" name="id"  />
          </form>
     <script>
@@ -327,7 +289,7 @@ font-size: 1rem!important;
 		var Werks_plant = $('#Werks_plant').val(); 
 		var from_date = $('#from_date').val(); 
 		var to_date = $('#to_date').val(); 
-	   	table = $('#datatable-iwm').DataTable();
+	   	table = $('#datatable-nagpurCND').DataTable();
 		table.destroy();
 		var i = 1;
 		$.fn.dataTable.moment('DD-MMM-YYYY');
@@ -336,7 +298,7 @@ font-size: 1rem!important;
 
 		/***************************************************************************************************/
 
-		$("#datatable-iwm")
+		$("#datatable-nagpurCND")
 				.DataTable(
 						{
 							"bProcessing" : true,
@@ -395,7 +357,7 @@ font-size: 1rem!important;
 										'<div class="right-btns"></div>');
 								$('.dataTables_filter div').append(
 										$searchButton, $clearButton);
-								rowLen = $('#datatable-iwm tbody tr:visible').length
+								rowLen = $('#datatable-nagpurCND tbody tr:visible').length
 								/* var input = $('.dataTables_filter input').unbind(),
 								self = this.api(),
 								$searchButton = $('<i class="fa fa-search">')
@@ -424,7 +386,7 @@ font-size: 1rem!important;
 							},
 							
 							"bDestroy" : true,
-							"sAjaxSource" : "	<%=request.getContextPath()%>/ajax/get-iwm-list?"+myParams,
+							"sAjaxSource" : "	<%=request.getContextPath()%>/ajax/get-nagpurCND-list?"+myParams,
 		        "aoColumns": [
 		        	 { "mData": function(data,type,row){
                       if($.trim(data.incremental_number) == ''){ return '-'; }else{ return data.incremental_number ; }

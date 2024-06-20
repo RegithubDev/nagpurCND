@@ -156,7 +156,7 @@ public class IrisUserController {
 		return model;
 	}
 	
-	@RequestMapping(value = "/iwm-adduser", method = {RequestMethod.POST, RequestMethod.GET})
+	@RequestMapping(value = "/nagpurCND-adduser", method = {RequestMethod.POST, RequestMethod.GET})
 	public ModelAndView irisadduser(@ModelAttribute User user, HttpSession session) {
 		ModelAndView model = new ModelAndView(PageConstants.irisadduser);
 		try {
