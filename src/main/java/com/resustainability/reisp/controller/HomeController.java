@@ -51,7 +51,7 @@ public class HomeController {
     }
 	Logger logger = Logger.getLogger(HomeController.class);
 	
-	@Autowired
+	@Autowired 
 	IrisUserService service;
 	
 	@Autowired
