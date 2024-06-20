@@ -49,7 +49,7 @@
       padding: 20px;
       margin: 20px auto;
       background-color: #f9f9f9;
-      max-width: 800px; /* To center the box and limit its width */
+      max-width: 60%; 
     }
     #card-box .card {
       margin: 10px 0;
@@ -113,23 +113,19 @@ font-size: 1rem!important;
     <!-- Card Row -->
     <div class="row justify-content-center">
       <div class="col-md-6 col-xl-4 mb-4">
-        <div class="card text-center shadow-lg" style="background-color: #007bff; color: #ffffff; border-radius: 10px;">
-          <div class="card-body">
-            <h4 class="card-title"><i data-feather='trello'></i><span style="text-decoration: underline; color: white;">Daily Report</span></h4>
-            <p class="card-text">Summary of yearly activities and statistics.</p>
+<div class="card text-center shadow-lg" style="background-color: #2c9faf;color: #ffffff;border-radius: 10px;">          <div class="card-body">
+            <h4 class="card-title"><span style="text-decoration: underline; color: white;">Daily Report</span></h4>
             <ul class="list-unstyled">
-              <li><strong>Visits:</strong> 2,880,000</li>
+              <li><strong>Weight(IN KG's)</strong>123</li>
             </ul>
           </div>
         </div>
       </div>
       <div class="col-md-6 col-xl-4 mb-4">
-        <div class="card text-center shadow-lg" style="background-color: #dc3545; color: #ffffff; border-radius: 10px;">
-          <div class="card-body">
-            <h4 class="card-title"><i data-feather='trello'></i><span style="text-decoration: underline; color: white;">Monthly Report</span></h4>
-            <p class="card-text">Summary of monthly activities and statistics.</p>
+<div class="card text-center shadow-lg" style="background-color: #302a2b;color: #ffffff;border-radius: 10px;">          <div class="card-body">
+            <h4 class="card-title"><span style="text-decoration: underline; color: white;">Monthly Report</span></h4>
             <ul class="list-unstyled">
-              <li><strong>New Users:</strong> 36,000</li>
+              <li><strong>Weight(IN KG's)</strong>123</li>
             </ul>
           </div>
         </div>
