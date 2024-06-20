@@ -57,7 +57,7 @@ public class HomeController {
 	@Autowired
 	UserService service1;
 
-	@Value("${Login.Form.Invalid}")
+	@Value("${Login.Form.Invalid}")  
 	public String invalidIWMName;
 
 	@RequestMapping(value = "/home", method = {RequestMethod.POST, RequestMethod.GET})
