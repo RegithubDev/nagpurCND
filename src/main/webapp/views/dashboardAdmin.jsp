@@ -42,6 +42,8 @@
     <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//assets/css/style.css">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- END: Custom CSS-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
 <style>
  #card-box {
       border: 2px solid #ccc;
@@ -49,7 +51,7 @@
       padding: 20px;
       margin: 20px auto;
       background-color: #f9f9f9;
-      max-width: 800px; /* To center the box and limit its width */
+      max-width: 60%; 
     }
     #card-box .card {
       margin: 10px 0;
@@ -108,28 +110,35 @@ font-size: 1rem!important;
             </div>
           </div>
         </div>
- <section id="card-style-variation">
+
+<section id="card-style-variation">
+  <!-- Box containing cards -->
   <div id="card-box" class="container">
-    <!-- Card Row -->
     <div class="row justify-content-center">
+      <!-- Daily Report Card -->
       <div class="col-md-6 col-xl-4 mb-4">
-        <div class="card text-center shadow-lg" style="background-color: #007bff; color: #ffffff; border-radius: 10px;">
+        <div class="card text-center shadow-lg card-custom" style="background-color: #2c9faf; color: #ffffff;">
           <div class="card-body">
-            <h4 class="card-title"><i data-feather='trello'></i><span style="text-decoration: underline; color: white;">Daily Report</span></h4>
-            <p class="card-text">Summary of yearly activities and statistics.</p>
+            <h4 class="card-title">
+              <span style="font-size:x-small;text-decoration: underline;color: white;"><span id="daily-report-date"></span> (Daily Report)</span>
+            </h4>
             <ul class="list-unstyled">
-              <li><strong>Visits:</strong> 2,880,000</li>
+              <li><strong>Weight (IN KG's): </strong>
+              <span id="daily-weight" style="font-weight: bold;">123</span>
+              </li>
             </ul>
           </div>
         </div>
       </div>
+      <!-- Monthly Report Card -->
       <div class="col-md-6 col-xl-4 mb-4">
-        <div class="card text-center shadow-lg" style="background-color: #dc3545; color: #ffffff; border-radius: 10px;">
+        <div class="card text-center shadow-lg card-custom" style="background-color: #302a2b; color: #ffffff;">
           <div class="card-body">
-            <h4 class="card-title"><i data-feather='trello'></i><span style="text-decoration: underline; color: white;">Monthly Report</span></h4>
-            <p class="card-text">Summary of monthly activities and statistics.</p>
+            <h4 class="card-title">
+                   <span style="font-size:x-small;text-decoration: underline;color: white;"><span id="monthly-report-date"></span> (Monthly Report)</span>
+            </h4>
             <ul class="list-unstyled">
-              <li><strong>New Users:</strong> 36,000</li>
+              <li><strong>Weight (IN KG's): </strong><span id="monthly-weight"style="font-weight: bold;">123</span></li>
             </ul>
           </div>
         </div>
@@ -137,6 +146,7 @@ font-size: 1rem!important;
     </div>
   </div>
 </section>
+
 
 
     </div>
@@ -155,24 +165,12 @@ font-size: 1rem!important;
      <script src="/nagpurCND/resources/vendors/js/vendors.min.js"></script>
      <script src="/nagpurCND/resources/vendors/js/forms/select/select2.full.min.js"></script>
   
-     <script src="/nagpurCND/resources/js/scripts/forms/form-validation.js"></script>
-    <!-- BEGIN Vendor JS--> 
-    <script src="/nagpurCND/resources/vendors/js/forms/validation/jquery.validate.min.js"></script> 
-
-
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-
 
     <!-- BEGIN: Page Vendor JS-->
     <script src="/nagpurCND/resources//vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
     <script src="/nagpurCND/resources//vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
     <script src="/nagpurCND/resources//vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
     <script src="/nagpurCND/resources//vendors/js/tables/datatable/responsive.bootstrap5.min.js"></script>
-    <script src="/nagpurCND/resources//vendors/js/tables/datatable/datatables.checkboxes.min.js"></script>
-    <script src="/nagpurCND/resources//vendors/js/tables/datatable/datatables.buttons.min.js"></script>
     <script src="/nagpurCND/resources//vendors/js/tables/datatable/jszip.min.js"></script>
     <script src="/nagpurCND/resources//vendors/js/tables/datatable/pdfmake.min.js"></script>
     <script src="/nagpurCND/resources//vendors/js/tables/datatable/vfs_fonts.js"></script>
@@ -198,18 +196,8 @@ font-size: 1rem!important;
      <script src="/nagpurCND/resources/js2/datetime-moment-v1.10.12.js"  ></script>
     <!-- BEGIN: Page JS-->
     <script src="/nagpurCND/resources//js/scripts/tables/table-datatables-basic.min.js"></script>
-    <!-- END: Page JS-->
-    <script src="/nagpurCND/resources/vendors/js/pickers/pickadate/picker.js"></script>
-    <script src="/nagpurCND/resources/vendors/js/pickers/pickadate/picker.date.js"></script>
-    <script src="/nagpurCND/resources/vendors/js/pickers/pickadate/picker.time.js"></script>
-    <script src="/nagpurCND/resources/vendors/js/pickers/pickadate/legacy.js"></script>
-    <script src="/nagpurCND/resources/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
-        <script src="/nagpurCND/resources/js/scripts/forms/pickers/form-pickers.min.js"></script>
-         
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
         
         
          <form id="getIWM" class="row gy-1 pt-75" action="<%=request.getContextPath() %>/get-nagpurCND-details" method="post" class="form-horizontal" role="form" >
@@ -220,6 +208,33 @@ font-size: 1rem!important;
         $('#Werks_plant').select2({
         });
     });
+  
+    $(document).ready(function() {
+      // Replace these variables with your actual data source
+      let dailyWeight = 70; // Example weight for today
+      let monthlyWeight = 68; // Example weight for the current month
+
+      // Format today's date
+      let today = new Date();
+      let options = { year: 'numeric', month: 'long', day: 'numeric' };
+      let todayFormatted = today.toLocaleDateString(undefined, options);
+
+      // Update the daily report
+      $('#daily-report-date').text(todayFormatted);
+      $('#daily-weight').text(dailyWeight);
+
+      // Get current month and year
+      let monthFormatted = today.toLocaleDateString(undefined, { year: 'numeric', month: 'long' });
+
+      // Update the monthly report
+      $('#monthly-report-date').text(monthFormatted);
+      $('#monthly-weight').text(monthlyWeight);
+    });
+
+
+    
+    
+    
     
  $(window).on('load',  function(){
     	
@@ -238,190 +253,7 @@ font-size: 1rem!important;
      
   });
  
- 
- 
- function clearFilters(){
-	    var Werks_plant = $('#Werks_plant').val(); 
-		var from_date = $('#from_date').val(); 
-		var to_date = $('#to_date').val(); 
-		if( to_date != "" || from_date != "" || Werks_plant != ""){
-			$('#Werks_plant').val(""); 
-			$('#from_date').val(""); 
-			$('#to_date').val(""); 
-			getIWMList();
-		}
-}
 
-
- function getSiteFilterList() {
-	    var Werks_plant = $('#Werks_plant').val(); 
-		var from_date = $('#from_date').val(); 
-		var to_date = $('#to_date').val(); 
-       if ($.trim(Werks_plant) == "") {
-       	$("#Werks_plant option:not(:first)").remove();
-     	var myParams = {Werks_plant: Werks_plant, from_date: from_date, to_date : to_date };
-           $.ajax({
-               url: "<%=request.getContextPath()%>/ajax/getSiteFilterListForIWM",
-               data: myParams, cache: false,async: false,
-               success: function (data) {
-                   if (data.length > 0) {
-                       $.each(data, function (i, val) {
-						console.log($.trim(val.werks_plant))
-						if(val.project_name == '' || val.project_name == null){
-						    $("#Werks_plant").append('<option value="' + $.trim(val.werks_plant) + '">' +'['+ $.trim(val.werks_plant) +'] '+'</option>');
-						}else{
-						    $("#Werks_plant").append('<option value="' + $.trim(val.werks_plant) + '">' +'['+  $.trim(val.werks_plant) +'] - '+$.trim(val.project_name) +'</option>');
-						
-						}
-                       });
-                   }
-               },error: function (jqXHR, exception) {
-   	   			      $(".page-loader").hide();
-      	          	  getErrorMessage(jqXHR, exception);
-      	     	  }
-           });
-       }
-   }
-
- 
- function getIWMList() {
-		getSiteFilterList('');
-		var Werks_plant = $('#Werks_plant').val(); 
-		var from_date = $('#from_date').val(); 
-		var to_date = $('#to_date').val(); 
-	   	table = $('#datatable-nagpurCND').DataTable();
-		table.destroy();
-		var i = 1;
-		$.fn.dataTable.moment('DD-MMM-YYYY');
-		var rowLen = 0;
-		var myParams =   "from_date="+ from_date+ "&to_date="+ to_date+ "&Werks_plant="+ Werks_plant ;
-
-		/***************************************************************************************************/
-
-		$("#datatable-nagpurCND")
-				.DataTable(
-						{
-							"bProcessing" : true,
-							"bServerSide" : true,
-							"sort" : "position",
-							//bStateSave variable you can use to save state on client cookies: set value "true" 
-							"bStateSave" : false,
-							 stateSave: false,
-							 "fnStateSave": function (oSettings, oData) {
-							 	localStorage.setItem('MRVCDataTables', JSON.stringify(oData));
-							},
-							 "fnStateLoad": function (oSettings) {
-								return JSON.parse(localStorage.getItem('MRVCDataTables'));
-							 },
-							//Default: Page display length
-							"iDisplayLength" : 10,
-							"iData" : {
-								"start" : 52
-							},
-							//We will use below variable to track page number on server side(For more information visit: http://legacy.datatables.net/usage/options#iDisplayStart)
-							"iDisplayStart" : 0,
-							"fnDrawCallback" : function() {
-								//Get page numer on client. Please note: number start from 0 So
-								//for the first page you will see 0 second page 1 third page 2...
-								//Un-comment below alert to see page number
-								//alert("Current page number: "+this.fnPagingInfo().iPage);
-							},
-							//"sDom": 'l<"toolbar">frtip',
-							"initComplete" : function() {
-								$('.dataTables_filter input[type="search"]')
-								  		.attr('placeholder', 'Search')
-										.css({
-											'width' : '350px ',
-											'display' : 'inline-block'
-										});
-
-								var input = $('.dataTables_filter input')
-										.unbind()
-										.bind('keyup',function(e){
-										    if (e.which == 13){
-										    	self.search(input.val()).draw();
-										    }
-										}), self = this.api(), $searchButton = $(
-										'<i class="fa fa-search" title="Go" >')
-								//.text('Go')
-								.click(function() {
-									self.search(input.val()).draw();
-								}), $clearButton = $(
-										'<i class="fa fa-close" title="Reset">')
-								//.text('X')
-								.click(function() {
-									input.val('');
-									$searchButton.click();
-								})
-								$('.dataTables_filter').append(
-										'<div class="right-btns"></div>');
-								$('.dataTables_filter div').append(
-										$searchButton, $clearButton);
-								rowLen = $('#datatable-nagpurCND tbody tr:visible').length
-								/* var input = $('.dataTables_filter input').unbind(),
-								self = this.api(),
-								$searchButton = $('<i class="fa fa-search">')
-								           //.text('Go')
-								           .click(function() {			   	                    	 
-								              self.search(input.val()).draw();
-								           })			   	        
-								  $('.dataTables_filter label').append($searchButton); */
-							}
-							,
-							columnDefs : [ {
-								"targets" : '',
-								"orderable" : false,
-							}
-			                ],
-							"sScrollX" : "100%",
-							"sScrollXInner" : "100%",
-							"ordering":false,
-							"bScrollCollapse" : true,
-							"language" : {
-								"info" : "_START_ - _END_ of _TOTAL_",
-								paginate : {
-									next : '<i class="fa fa-angle-right"></i>', 
-									previous : '<i class="fa fa-angle-left"></i>'  
-								}
-							},
-							
-							"bDestroy" : true,
-							"sAjaxSource" : "	<%=request.getContextPath()%>/ajax/get-nagpurCND-list?"+myParams,
-		        "aoColumns": [
-		        	 { "mData": function(data,type,row){
-                      if($.trim(data.incremental_number) == ''){ return '-'; }else{ return data.incremental_number ; }
-		            } },
-		            { "mData": function(data,type,row){
-                      if($.trim(data.iwma_no) == ''){ return '-'; }else{ return data.iwma_no ; }
-		            } },
-		            { "mData": function(data,type,row){
-	                      if($.trim(data.manifest_no) == ''){ return '-'; }else{ return data.manifest_no ; }
-			            } },
-		            { "mData": function(data,type,row){
-	                      if($.trim(data.Name1_name) == ''){ return '-'; }else{ return '<button type="button" class="btn btn-flat-dark waves-effect">'+data.Name1_name+'</button>' ; }
-			        } },
-		         	{ "mData": function(data,type,row){
-                      if($.trim(data.Werks_plant) == ''){ return '-'; }else{ return '<button type="button" class="btn btn-flat-dark waves-effect">'+data.project_name+'</button>' }
-		            } },
-		            
-		            { "mData": function(data,type,row){
-	                      if($.trim(data.erdat_creationDate) == ''){ return '-'; }else{ return '<span class="badge badge-light-dark">'+data.erdat_creationDate +'</span>'; }
-			        } },
-		           /*  { "mData": function(data,type,row){ 
-		            	if($.trim(data.waste_category) == ''){ return '-'; }else{ return data.waste_category; }
-		            } } */
-		           { "mData": function(data,type,row){
-		            	if($.trim(data.waste_name) == ''){ return '-'; }else{ return data.waste_name; } 
-		            } }, 
-		            { "mData": function(data,type,row){
-		            	if($.trim(data.Manifest_Weight) == ''){ return '-'; }else{ return '<span class="fw-bolder text-success">'+data.Manifest_Weight+'</span>'; } 
-		            } }
-		        /* 	{ "mData": function(data,type,row){
-		            	if($.trim(data.disposal_method) == ''){ return '-'; }else{ return data.disposal_method; }
-		            } } */
-		        ]
-		    });
-}
 
 function getErrorMessage(jqXHR, exception) {
 	    var msg = '';
