@@ -107,8 +107,6 @@
         </div>
 <!-- Complex Headers -->
 <section id="complex-header-datatable">
-
-
    <div class="col-12">
       <div class="card">
         <div class="card-header">
@@ -140,11 +138,11 @@
                 <div class="row">
             <div class="mb-1 col-md-6">
             
-             <label class="form-label" for="basic-default-name">Customer ID</label>  <span class=re-text>*</span>
+             <label class="form-label" for="basic-default-name">User ID</label>  <span class=re-text>*</span>
               <input type="text" class="form-control" id="user_id" name="user_id" placeholder="Name" value="${UserDetails.user_name }">
             </div>
             <div class="mb-1 col-md-6">
-             <label class="form-label" for="basic-default-name">Customer Name</label>  <span class=re-text>*</span>
+             <label class="form-label" for="basic-default-name">User Name</label>  <span class=re-text>*</span>
               <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Name" value="${UserDetails.user_name }">
             </div>
           </div>
@@ -182,15 +180,6 @@
 	    	</div>
 		</div>
 	
-<!-- <div class="mb-1 col-md-6">
-    <label class="form-label" for="confirm-password">Confirm Password</label>
-    <div class="input-group">
-        <input type="password" id="confirm-password" name="confirm-password" class="form-control" placeholder="············">
-        <button class="btn btn-outline-secondary" type="button" id="toggleConfirmPassword">
-            <i class="fas fa-eye" id="toggleConfirmIcon"></i>
-        </button>
-    </div>
-</div> -->
 
           </div>
           </c:if>
@@ -251,7 +240,9 @@
     <footer class="footer footer-static footer-light">
       <p class="clearfix mb-0"><span class="float-md-start d-block d-md-inline-block mt-25">COPYRIGHT  &copy;  <span id="currentYear"></span> ,| Powered by<a class="ms-25" href="https://ramkyenviroengineers.com/" target="_blank">Re Sustainability Limited</a><span class="d-none d-sm-inline-block"> . All Rights Reserved.</span></span></p>
     </footer>
-    <button class="btn btn-primary btn-icon scroll-top waves-effect waves-float waves-light" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></button>
+    <button class="btn btn-primary btn-icon scroll-top waves-effect waves-float waves-light" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up">
+    <line x1="12" y1="19" x2="12" y2="5"></line>
+    <polyline points="5 12 12 5 19 12"></polyline></svg></button>
     <!-- END: Footer-->
 
 
