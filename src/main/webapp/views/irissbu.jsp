@@ -6,44 +6,115 @@
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
     <title>IRIS-SBU</title>
-    <link rel="apple-touch-icon" href="/iris/resources//images/ico/apple-icon-120.html">
-    <link rel="shortcut icon" type="image/x-icon" href="/iris/resources/images/logo/logo.png">
+    <link rel="apple-touch-icon" href="/nagpurCND/resources//images/ico/apple-icon-120.html">
+    <link rel="shortcut icon" type="image/x-icon" href="/nagpurCND/resources/images/logo/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
-     <link rel="stylesheet" type="text/css" href="/iris/resources/vendors/css/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources/vendors/css/forms/select/select2.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources//vendors/css/tables/datatable/dataTables.bootstrap5.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources//vendors/css/tables/datatable/responsive.bootstrap5.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources//vendors/css/
+     <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/vendors/css/forms/select/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//vendors/css/tables/datatable/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//vendors/css/tables/datatable/responsive.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//vendors/css/
     
     tables/datatable/buttons.bootstrap5.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources//vendors/css/tables/datatable/rowGroup.bootstrap5.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources//vendors/css/pickers/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//vendors/css/tables/datatable/rowGroup.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//vendors/css/pickers/flatpickr/flatpickr.min.css">
     <!-- END: Vendor CSS-->
-  <link rel="stylesheet" type="text/css" href="/iris/resources/css/plugins/forms/form-validation.css">
+  <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/plugins/forms/form-validation.css">
     <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="/iris/resources//css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources//css/bootstrap-extended.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources//css/colors.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources//css/components.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources//css/themes/dark-layout.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources//css/themes/bordered-layout.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources//css/themes/semi-dark-layout.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/bootstrap-extended.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/colors.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/components.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/themes/dark-layout.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/themes/bordered-layout.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/themes/semi-dark-layout.min.css">
 
     <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="/iris/resources//css/core/menu/menu-types/vertical-menu.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/core/menu/menu-types/vertical-menu.min.css">
     <!-- END: Page CSS-->
-  <link rel="stylesheet" type="text/css" href="/iris/resources/css/plugins/forms/pickers/form-flat-pickr.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources/css/plugins/forms/pickers/form-pickadate.min.css">
+  <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/plugins/forms/pickers/form-flat-pickr.min.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/plugins/forms/pickers/form-pickadate.min.css">
     <!-- END: Page CSS-->
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="/iris/resources//assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//assets/css/style.css">
     <!-- END: Custom CSS-->
 <style>
-td{
-font-size: 1rem!important;
-}
+ body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+    color: #333; /* Default text color */
+  }
+
+  .container {
+    max-width: 206rem;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    text-align: center;
+    color: #5b9bd5; /* Blue color for title */
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+
+  th, td {
+      font-size: x-small;
+    border: 1px solid #999;
+ /*    padding: 10px; */
+    text-align: left;
+    background-color: #fff; /* White background for cells */
+  }
+
+  th {
+    background-color: #5b9bd5;
+    color: white;
+  }
+
+  tbody > tr:nth-child(even) {
+    background-color: #d0deef; /* Light blue background for even rows */
+  }
+
+  tbody > tr:nth-child(odd) {
+    background-color: #d8e2f3; /* Lighter blue background for odd rows */
+  }
+
+  /* Custom class for green background */
+  .green-background {
+    background-color: #a8d08c;
+  }
+
+  /* Styling for input fields in 2nd and 5th columns */
+  td:nth-child(2) input[type="text"],
+  td:nth-child(5) input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 5px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color: #a8d08c; /* Green background for input fields in 2nd and 5th columns */
+    color: #333; /* Text color */
+  }
+
+  input[type="text"].orange-background {
+    background-color: orange; /* Orange background */
+  }
+
+  input[type="text"].blue-background {
+    background-color: #5b9bd5; /* Blue background */
+  }
 
 </style>
   </head>
@@ -76,198 +147,166 @@ font-size: 1rem!important;
 <!--/ Basic table -->
 
 <!-- Complex Headers -->
-<div class="content-header row">
-          <div class="content-header-left col-md-9 col-12 mb-2">
-            <div class="row breadcrumbs-top">
-              <div class="col-12">
-                <h2 class="content-header-title float-start mb-0">SBU</h2>
-                <div class="breadcrumb-wrapper">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/iris/iris-settings"><i data-feather='settings'></i> Masters</a>
-                    </li>
-                    <li class="breadcrumb-item"><a> SBU</a>
-                    </li>
-                   
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
-            <div class="mb-1 breadcrumb-right">
-              
-            </div>
+<div class="content-body" style=" margin-top: -3rem;">
+<div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <h2 class="fw-bolder mb-0">Baseline Information (FY 2023-24)</h2>
           </div>
         </div>
-<section id="complex-header-datatable">
-          <div class="content-wrapper container-xxl p-0 mt-2">
-         <!--    <div class="content-header row">
-									            <div class="sidebar-toggle d-block d-lg-none ms-1">
-											      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu font-medium-5"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-											    </div>
-            </div> -->
-            <div class="content-body"><div class="body-content-overlay"></div>
-            
-            
-           <div class="card-body" id="filterDiv">
-          <div class="row">
-          
-   
-            <div class="col-xl-3 col-md-6 col-12" style="
-    padding-right: calc(var(--bs-gutter-x) * 0);
-">
-             <div class="mb-1">
-              <label class="form-label" for="select2-basic">SBU</label>
-              <div class="position-relative" ><select  class="searchable form-select " id="sbuID" data-select2-id="select2-basic0" tabindex="-1" aria-hidden="true">
-               <option value="" >Select SBU</option>
-               
-              </select></div>
-            </div>
-            </div>
-             <div class="col-xl-3 col-md-6 col-12" style="padding-right: calc(var(--bs-gutter-x) * 0);">
-             <div class="mb-1">
-              <label class="form-label" for="select2-basic">Status</label>
-              <div class="position-relative" ><select  class="searchable form-select " id="rolesId" data-select2-id="select2-basic" tabindex="0" aria-hidden="true">
-               <option value="" >Select Status</option>
-               
-              </select></div>
-            </div>
-            </div>
-            <div class="re-text col-xl-4 col-md-3 col-12">
-             <div class="demo-inline-spacing">
-            <a type="button" class="btn btn-gradient-danger re-text-bg" onclick="getSBUList();"><i data-feather='search'></i> Filter </a>
-           <a  onclick="clearFilters();" id="clearFilterBtn"  class="btn btn-gradient-danger re-text-bg "> Clear Filter </a> 
+      </div>
+    </div>
+   <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <h2 class="fw-bolder mb-0">Baseline Information (FY 2023-24)</h2>
           </div>
-            </div>
-            <!--  <div class="re-text col-xl-2 col-md-3 col-12 mt-2 text-end">
-               <a type="button" class="btn btn-gradient-danger re-text-bg" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Export to Excel">Export <img src="/iris/resources/images/icons/Excel.png" class="logo" style="width: 2rem;">  </a>
-             </div> -->
-          </div>
-        </div> 
-        <div class="toast-container position-fixed top-0 end-0 p-2" style="z-index: 15">
-  
-
- 
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Table 1 -->
+  <table>
+    <tbody>
+      <tr>
+        <td style=" width: 18rem;">Total Quantity of Waste Handled</td>
+        <td style="width: 9rem;"><input type="text"></td>   
+         <td style="width: 4rem;">Tons</td>
+         <td  colspan="3"></td>
+     </tr>
+      
+      <tr>
+        <td  colspan="6"></td>
+      </tr>
+       <tr>
+       <td colspan="6" style="background-color: #d0deef;text-align: center;">Fresh Water</td>
+      </tr>
+     
+      <tr>
+        <td style=" width: 18rem;" >Total Net Fresh Water Consumption, in KL</td>
+         <td style="width: 9rem;"><input type="text"></td>  
+          <td style="width: 4rem;">KL</td>
+           <td style="width: 19rem;">Reduction in Specific Fresh Water Consumption in FY 2024-25 compared to the Baseline FY 2023-24</td>
+           <td style="width: 9rem;"><input type="text"></td> 
+            <td style="width: 4rem;">%</td> 
+        </tr>
+        
+         <tr>
+        <td style=" width: 18rem;" >Specific Fresh Water Consumption, in KL</td>
+         <td style=" width: 9rem;"><input type="text" style=" background-color: #fee599;"></td>  
+          <td style="width: 4rem;">KL/Ton</td>
+           <td  colspan="4" ></td>
+           </tr>
+            
+            <tr>
+            <td colspan="6" style="background-color: #d0deef;text-align: center;">Electrical Energy (within the facility)</td>
+           </tr>
+       
+       <tr>
+        <td style="width: 18rem;" >Electricity Consumption from Grid</td>
+         <td style=" width: 9rem;"><input type="text"></td>  
+          <td style="width: 4rem;">kWh</td>
+           <td style=" width: 19rem;">Renewable Energy in Total Energy Consumption</td>
+           <td style=" width: 9rem;"><input type="text"></td> 
+             <td style=" width: 4rem;">%</td> 
+             </tr>
+             
+             <tr>
+        <td style=" width: 18rem;" >Electricity Consumption from Renewable (Solar) Source</td>
+         <td style=" width: 9rem;"><input type="text"></td>  
+          <td style="width: 4rem;">kWh</td>
+           <td  colspan="4" ></td>
+           </tr>
+           
+            <tr>
+        <td style=" width: 18rem;" >Specific Electricity Consumption</td>
+         <td style="width: 9rem;"><input type="text"style=" background-color: #fee599;"></td>  
+          <td style="width: 4rem;">kWh/ton</td>
+           <td style="width: 19rem;">Reduction in Specific Electricity Consumption in FY 2024-25 compared to the Baseline FY 2023-24</td>
+           <td style="width: 9rem;"><input type="text"></td> 
+            <td style="width: 4rem;">%</td> 
+        </tr>
+        
+         <tr>
+            <td colspan="6" style="background-color: #d0deef;text-align: center;">Thermal Energy (within the facility)</td>
+           </tr>
+           
+            <tr>
+        <td style=" width: 18rem;" >HSD consumption</td>
+         <td style="width: 9rem;"><input type="text"></td>  
+          <td style="width: 4rem;">Liters</td>
+           <td style="width: 19rem;">Reduction in Specific Thermal Energy Consumption in FY 2024-25 compared to the Baseline FY 2023-24</td>
+           <td style="width: 9rem;"><input type="text"></td> 
+            <td style="width: 4rem;">%</td> 
+        </tr>
+       
+         <tr>
+        <td style=" width: 18rem;" >LDO consumption</td>
+         <td style=" width: 9rem;"><input type="text"></td>  
+          <td style="width: 4rem;">Liters</td>
+           <td  colspan="4" ></td>
+           </tr>
+           
+             <tr>
+        <td style=" width: 18rem;" >PNG consumption</td>
+         <td style=" width: 9rem;"><input type="text"></td>  
+          <td style="width: 4rem;">Kg</td>
+           <td  colspan="4" ></td>
+           </tr>
+           
+             <tr>
+        <td style=" width: 18rem;" >CNG/CBG consumption</td>
+         <td style=" width: 9rem;"><input type="text"></td>  
+          <td style="width: 4rem;">Kg</td>
+           <td  colspan="4" ></td>
+           </tr>
+           
+             <tr>
+        <td style=" width: 18rem;" >Coal consumption</td>
+         <td style=" width: 9rem;"><input type="text"></td>  
+          <td style="width: 4rem;">Kg</td>
+           <td  colspan="4" ></td>
+           </tr>
+           
+             <tr>
+        <td style=" width: 18rem;" >Furnace Oil consumption</td>
+         <td style=" width: 9rem;"><input type="text"></td>  
+          <td style="width: 4rem;">Liters</td>
+           <td  colspan="4" ></td>
+           </tr>
+       
+        <tr>
+        <td style=" width: 18rem;" >Biomass</td>
+         <td style=" width: 9rem;"><input type="text"></td>  
+          <td style="width: 4rem;">Kg</td>
+           <td  colspan="4" ></td>
+           </tr>
+           
+           <tr>
+        <td style=" width: 18rem;" >Total Energy, in GJ</td>
+         <td style=" width: 9rem;"><input type="text" style=" background-color: #fee599;"></td>  
+          <td style="width: 4rem;">GJ</td>
+           <td  colspan="4" ></td>
+           </tr>
+           
+           <tr>
+        <td style=" width: 18rem;" >Specific Thermal Energy Consumption, in GJ/ton (FY 2023-24)</td>
+         <td style=" width: 9rem;"><input type="text" style=" background-color: #fee599;"></td>  
+          <td style="width: 4rem;">GJ/Ton</td>
+           <td  colspan="4" ></td>
+           </tr>
+       
+    </tbody>
+  </table>
 </div>
-            <br>
-<div class="col-12" id="bigDiv">
 
-      <div class="card" style="border: 1px solid black;padding: 4px;">
-								<div >
-									<div class="card-header border-bottom p-1">
-										<div class="head-label">
-											<h6 class="mb-0"><i data-feather='grid'></i> SBU</h6>
-										</div>
-										<div>
-											
-										<div class="modal-size-default d-inline-block">
-              <a type="button" class="btn btn-gradient-danger re-text-bg m-1" 
-             data-bs-toggle="modal" data-bs-target="#defaultSize"><i data-feather='user-check'></i> Add New SBU</a>
-              <!-- Modal -->
-              <div class="modal fade text-start" id="defaultSize" tabindex="-1" aria-labelledby="myModalLabel18" style="display: none;" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header re-text-bg">
-                      <h4 class="modal-title text-white" id="myModalLabel18">Add SBU</h4>
-                      <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                     <form id="jquery-val-form" action="<%=request.getContextPath() %>/add-sbu-iris" method="post" novalidate="novalidate">
-                      <div class="mb-1">
-			              <label class="form-label" for="sbu_code">SBU Code</label>  <span class=re-text>*</span>
-			              <input type="text" class="form-control" id="sbu_code" name="sbu_code" placeholder="Sbu Code">
-			            </div>
-			            <div class="mb-1">
-			              <label class="form-label" for="sbu_name">SBU Name</label>  <span class=re-text>*</span>
-			              <input type="text" class="form-control" id="sbu_name" name="sbu_name" placeholder="Sbu Name">
-			            </div>
-			                <div class="mb-1">
-			              <label class="form-label" for="status">Status</label>
-			              <div class="position-relative">
-			              <select class="form-select select2 select2-hidden-accessible" id="status" name="status" data-select2-id="select-country" tabindex="-1" aria-hidden="true">
-			                <option value="Active">Active</option>
-			                <option value="Inactive">Inactive</option>
-			        
-			              </select></div>
-			            </div>
-			 				<div class="col-md-12 col-12 text-center mt-2">
-			               		<button type="submit" class="btn btn-primary waves-effect waves-float waves-light" name="submit" onclick="addBox();" >Submit</button>
-			                		<a  data-bs-dismiss="modal" class="btn btn-dark waves-effect waves-float waves-light" >Close</a>
-			              </div>         
-			          </form>
-			                    </div>
-			                   
-			                  </div>
-			                </div>
-			              </div>
-			            </div>
-					
-					 </div>
-					</div>
-					 <table id="datatable-sbu" class="invoice-list-table table">
-				            <thead>
-				              <tr>
-				                <th >#</th>
-								<th >Actions</th>
-								<th >SBU</th>
-								<th >Status</th>
-								 <th >Created By</th>
-								<th >Created Date</th>
-								<th >Modified By </th>
-								<th >Modified Date</th>
-								
-             				</tr>
-			            </thead>
-			          </table>
-					</div>
-				</div>
-    		</div>
-            </div>
-          </div>
-	</section>
-	 <div class="modal-size-default d-inline-block">
-             <!--  <a type="button" class="btn btn-gradient-danger re-text-bg m-1" 
-             data-bs-toggle="modal" data-bs-target="#updatemodel"><i data-feather='user-check'></i> Update SBU</a> -->
-              <!-- Modal -->
-              <div class="modal fade text-start" id="updatemodel" tabindex="-1" aria-labelledby="myModalLabel18" style="display: none;" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header re-text-bg">
-                      <h4 class="modal-title text-white" id="myModalLabel18">Update SBU</h4>
-                      <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                     <form id="jquery-val-form2"  action="<%=request.getContextPath() %>/update-sbu-iris" method="post" novalidate="novalidate">
-                      <input type="hidden" class="form-control" id="id" name="id">
-                      <div class="mb-1">
-			              <label class="form-label" for="sbu_code">SBU Code</label>
-			              <span class="badge badge-light-primary" id="sbu_code_edit"></span>
-			             <!--  <input type="text" class="form-control" id="sbu_code_edit" name="sbu_code"  placeholder="Sbu Code"> -->
-			            </div>
-			            <div class="mb-1">
-			              <label class="form-label" for="sbu_name">SBU Name</label> <span class=re-text>*</span>
-			              <input type="text" class="form-control" id="sbu_name_edit" name="sbu_name" placeholder="Sbu Name">
-			            </div>
-			                <div class="mb-1">
-			              <label class="form-label" for="status">Status</label> <span class=re-text>*</span>
-			              <div class="position-relative">
-			              <select class="form-select  select2-hidden-accessible status_edit" id="status_edit" name="status" data-select2-id="select-status" tabindex="-1" aria-hidden="true">
-			                <option value="Active">Active</option>
-			                <option value="Inactive">Inactive</option>
-			        
-			              </select></div>
-			            </div>
-			 				<div class="col-md-12 col-12 text-center mt-2">
-			               		<button type="submit"  class="btn btn-primary waves-effect waves-float waves-light" name="submit" >Submit</button>
-			                		<a  data-bs-dismiss="modal" class="btn btn-dark waves-effect waves-float waves-light" >Close</a>
-			              </div>         
-			          </form>
-			                    </div>
-			                   
-			                  </div>
-			                </div>
-			              </div>
-			            </div>
+
+
+
+	 
     </div>
   </div>
 </div>
@@ -281,52 +320,52 @@ font-size: 1rem!important;
     <button class="btn btn-primary btn-icon scroll-top waves-effect waves-float waves-light" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></button>
    
    
-     <script src="/iris/resources/vendors/js/vendors.min.js"></script>
-     <script src="/iris/resources/vendors/js/forms/select/select2.full.min.js"></script>
+     <script src="/nagpurCND/resources/vendors/js/vendors.min.js"></script>
+     <script src="/nagpurCND/resources/vendors/js/forms/select/select2.full.min.js"></script>
   
-     <script src="/iris/resources/js/scripts/forms/form-validation.js"></script>
+     <script src="/nagpurCND/resources/js/scripts/forms/form-validation.js"></script>
     <!-- BEGIN Vendor JS--> 
-    <script src="/iris/resources/vendors/js/forms/validation/jquery.validate.min.js"></script> 
+    <script src="/nagpurCND/resources/vendors/js/forms/validation/jquery.validate.min.js"></script> 
 
     <!-- BEGIN: Page Vendor JS-->
-    <script src="/iris/resources//vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
-    <script src="/iris/resources//vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
-    <script src="/iris/resources//vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
-    <script src="/iris/resources//vendors/js/tables/datatable/responsive.bootstrap5.min.js"></script>
-    <script src="/iris/resources//vendors/js/tables/datatable/datatables.checkboxes.min.js"></script>
-    <script src="/iris/resources//vendors/js/tables/datatable/datatables.buttons.min.js"></script>
-    <script src="/iris/resources//vendors/js/tables/datatable/jszip.min.js"></script>
-    <script src="/iris/resources//vendors/js/tables/datatable/pdfmake.min.js"></script>
-    <script src="/iris/resources//vendors/js/tables/datatable/vfs_fonts.js"></script>
-    <script src="/iris/resources//vendors/js/tables/datatable/buttons.html5.min.js"></script>
-    <script src="/iris/resources//vendors/js/tables/datatable/buttons.print.min.js"></script>
-    <script src="/iris/resources//vendors/js/tables/datatable/dataTables.rowGroup.min.js"></script>
-    <script src="/iris/resources//vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/responsive.bootstrap5.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/datatables.checkboxes.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/datatables.buttons.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/jszip.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/pdfmake.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/vfs_fonts.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/buttons.html5.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/buttons.print.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/tables/datatable/dataTables.rowGroup.min.js"></script>
+    <script src="/nagpurCND/resources//vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
     <!-- END: Page Vendor JS-->
-      <script src="/iris/resources/js2/dataTables.material.min.js"  ></script>
-          <script src="/iris/resources/js2/jquery.dataTables-v.1.10.min.js"  ></script>
-              <script src="/iris/resources/vendors/js/extensions/moment.min.js"></script>
-    <script src="/iris/resources/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
-    <script src="/iris/resources/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
-    <script src="/iris/resources/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
-    <script src="/iris/resources/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
-    <script src="/iris/resources/vendors/js/tables/datatable/responsive.bootstrap5.js"></script>
+      <script src="/nagpurCND/resources/js2/dataTables.material.min.js"  ></script>
+          <script src="/nagpurCND/resources/js2/jquery.dataTables-v.1.10.min.js"  ></script>
+              <script src="/nagpurCND/resources/vendors/js/extensions/moment.min.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/tables/datatable/responsive.bootstrap5.js"></script>
     <!-- BEGIN: Theme JS-->
-     <script src="/iris/resources/js/scripts/components/components-bs-toast.min.js"></script>
-    <script src="/iris/resources//js/core/app-menu.min.js"></script>
-    <script src="/iris/resources//js/core/app.min.js"></script>
-    <script src="/iris/resources//js/scripts/customizer.min.js"></script>
+     <script src="/nagpurCND/resources/js/scripts/components/components-bs-toast.min.js"></script>
+    <script src="/nagpurCND/resources//js/core/app-menu.min.js"></script>
+    <script src="/nagpurCND/resources//js/core/app.min.js"></script>
+    <script src="/nagpurCND/resources//js/scripts/customizer.min.js"></script>
     <!-- END: Theme JS-->
-     <script src="/iris/resources/js2/datetime-moment-v1.10.12.js"  ></script>
+     <script src="/nagpurCND/resources/js2/datetime-moment-v1.10.12.js"  ></script>
     <!-- BEGIN: Page JS-->
-    <script src="/iris/resources//js/scripts/tables/table-datatables-basic.min.js"></script>
+    <script src="/nagpurCND/resources//js/scripts/tables/table-datatables-basic.min.js"></script>
     <!-- END: Page JS-->
-    <script src="/iris/resources/vendors/js/pickers/pickadate/picker.js"></script>
-    <script src="/iris/resources/vendors/js/pickers/pickadate/picker.date.js"></script>
-    <script src="/iris/resources/vendors/js/pickers/pickadate/picker.time.js"></script>
-    <script src="/iris/resources/vendors/js/pickers/pickadate/legacy.js"></script>
-    <script src="/iris/resources/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
-        <script src="/iris/resources/js/scripts/forms/pickers/form-pickers.min.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/pickers/pickadate/picker.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/pickers/pickadate/picker.date.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/pickers/pickadate/picker.time.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/pickers/pickadate/legacy.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+        <script src="/nagpurCND/resources/js/scripts/forms/pickers/form-pickers.min.js"></script>
         
     <script>
  $(window).on('load',  function(){
@@ -532,7 +571,7 @@ font-size: 1rem!important;
 							},
 							
 							"bDestroy" : true,
-							"sAjaxSource" : "	<%=request.getContextPath()%>/ajax/get-sbu-iris?"+myParams,
+							"sAjaxSource" : "	<%=request.getContextPath()%>/ajax/get-sbu-nagpurCND?"+myParams,
 		        "aoColumns": [
 		        	 { "mData": function(data,type,row){
                       if($.trim(data.sbu_name) == ''){ return '-'; }else{ return i++ ; }

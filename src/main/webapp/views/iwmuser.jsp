@@ -81,7 +81,7 @@ font-size: 1rem!important;
           <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
               <div class="col-12">
-                <h2 class="content-header-title float-start mb-0"><span class="badge badge-glow bg-dark">Users</span></h2>
+                <h2 class="content-header-title float-start mb-0"><span class="badge badge-glow bg-dark">Members</span></h2>
                 
               </div>
             </div>
@@ -452,7 +452,7 @@ font-size: 1rem!important;
 							},
 							
 							"bDestroy" : true,
-							"sAjaxSource" : "	<%=request.getContextPath()%>/ajax/get-users-nagpurCND?"+myParams,
+							"sAjaxSource" : "	<%=request.getContextPath()%>/ajax/get-users-iwm?"+myParams,
 		        "aoColumns": [
 		        	 { "mData": function(data,type,row){
                       if($.trim(data.user_id) == ''){ return '-'; }else{ return i++ ; }
