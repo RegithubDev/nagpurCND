@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding = "UTF-8"%>
+i<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding = "UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <html class="loaded light-layout" lang="en" data-textdirection="ltr" style="--vh: 3.54px;">
@@ -10,37 +10,37 @@
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
     <title>IRIS-Role</title>
-    <link rel="apple-touch-icon" href="/iris/resources//images/ico/apple-icon-120.html">
-    <link rel="shortcut icon" type="image/x-icon" href="/iris/resources/images/logo/logo.png">
+    <link rel="apple-touch-icon" href="/irisresources//images/ico/apple-icon-120.html">
+    <link rel="shortcut icon" type="image/x-icon" href="/irisresources/images/logo/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
-     <link rel="stylesheet" type="text/css" href="/iris/resources/vendors/css/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources/vendors/css/forms/select/select2.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources//vendors/css/tables/datatable/dataTables.bootstrap5.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources//vendors/css/tables/datatable/responsive.bootstrap5.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources//vendors/css/tables/datatable/buttons.bootstrap5.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources//vendors/css/tables/datatable/rowGroup.bootstrap5.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources//vendors/css/pickers/flatpickr/flatpickr.min.css">
+     <link rel="stylesheet" type="text/css" href="/irisresources/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="/irisresources/vendors/css/forms/select/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="/irisresources//vendors/css/tables/datatable/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/irisresources//vendors/css/tables/datatable/responsive.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/irisresources//vendors/css/tables/datatable/buttons.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/irisresources//vendors/css/tables/datatable/rowGroup.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/irisresources//vendors/css/pickers/flatpickr/flatpickr.min.css">
     <!-- END: Vendor CSS-->
-  <link rel="stylesheet" type="text/css" href="/iris/resources/css/plugins/forms/form-validation.css">
+  <link rel="stylesheet" type="text/css" href="/irisresources/css/plugins/forms/form-validation.css">
     <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="/iris/resources//css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources//css/bootstrap-extended.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources//css/colors.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources//css/components.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources//css/themes/dark-layout.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources//css/themes/bordered-layout.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources//css/themes/semi-dark-layout.min.css">
+    <link rel="stylesheet" type="text/css" href="/irisresources//css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/irisresources//css/bootstrap-extended.min.css">
+    <link rel="stylesheet" type="text/css" href="/irisresources//css/colors.min.css">
+    <link rel="stylesheet" type="text/css" href="/irisresources//css/components.min.css">
+    <link rel="stylesheet" type="text/css" href="/irisresources//css/themes/dark-layout.min.css">
+    <link rel="stylesheet" type="text/css" href="/irisresources//css/themes/bordered-layout.min.css">
+    <link rel="stylesheet" type="text/css" href="/irisresources//css/themes/semi-dark-layout.min.css">
 
     <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="/iris/resources//css/core/menu/menu-types/vertical-menu.min.css">
+    <link rel="stylesheet" type="text/css" href="/irisresources//css/core/menu/menu-types/vertical-menu.min.css">
     <!-- END: Page CSS-->
-  <link rel="stylesheet" type="text/css" href="/iris/resources/css/plugins/forms/pickers/form-flat-pickr.min.css">
-    <link rel="stylesheet" type="text/css" href="/iris/resources/css/plugins/forms/pickers/form-pickadate.min.css">
+  <link rel="stylesheet" type="text/css" href="/irisresources/css/plugins/forms/pickers/form-flat-pickr.min.css">
+    <link rel="stylesheet" type="text/css" href="/irisresources/css/plugins/forms/pickers/form-pickadate.min.css">
     <!-- END: Page CSS-->
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="/iris/resources//assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/irisresources//assets/css/style.css">
     <!-- END: Custom CSS-->
 <style>
 td{
@@ -85,7 +85,7 @@ font-size: 1rem!important;
                 <h2 class="content-header-title float-start mb-0">Role</h2>
                 <div class="breadcrumb-wrapper">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/iris/iris-settings"><i data-feather='settings'></i> Masters</a>
+                    <li class="breadcrumb-item"><a href="/irisnagpurCND-settings"><i data-feather='settings'></i> Masters</a>
                     </li>
                     <li class="breadcrumb-item"><a>Role</a>
                     </li>
@@ -152,7 +152,7 @@ font-size: 1rem!important;
           </div>
             </div>
              <!-- <div class="re-text col-xl-2 col-md-3 col-12 mt-2 text-end">
-               <a type="button" class="btn btn-gradient-danger re-text-bg" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Export to Excel">Export <img src="/iris/resources/images/icons/Excel.png" class="logo" style="width: 2rem;">  </a>
+               <a type="button" class="btn btn-gradient-danger re-text-bg" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Export to Excel">Export <img src="/irisresources/images/icons/Excel.png" class="logo" style="width: 2rem;">  </a>
              </div> -->
           </div>
         </div> 
@@ -184,7 +184,7 @@ font-size: 1rem!important;
                       <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                     <form id="jquery-val-form" action="<%=request.getContextPath() %>/add-role-iris" method="post" novalidate="novalidate">
+                     <form id="jquery-val-form" action="<%=request.getContextPath() %>/add-role-nagpurCND" method="post" novalidate="novalidate">
                       <div class="mb-1">
 			              <label class="form-label" for="sbu_code">SBU</label>  <span class=re-text>*</span>
 			              <select
@@ -263,7 +263,7 @@ font-size: 1rem!important;
                       <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                     <form id="jquery-val-form" action="<%=request.getContextPath() %>/update-role-iris" method="post" novalidate="novalidate">
+                     <form id="jquery-val-form" action="<%=request.getContextPath() %>/update-role-nagpurCND" method="post" novalidate="novalidate">
                       <div class="mb-1">
 			              <label class="form-label" for="sbu_code">SBU</label>  <span class=re-text>*</span>
 			              <input type="hidden" class="form-control" id="idVal" name="id" />
@@ -319,52 +319,52 @@ font-size: 1rem!important;
     <button class="btn btn-primary btn-icon scroll-top waves-effect waves-float waves-light" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></button>
    
    
-     <script src="/iris/resources/vendors/js/vendors.min.js"></script>
-     <script src="/iris/resources/vendors/js/forms/select/select2.full.min.js"></script>
+     <script src="/irisresources/vendors/js/vendors.min.js"></script>
+     <script src="/irisresources/vendors/js/forms/select/select2.full.min.js"></script>
   
-     <script src="/iris/resources/js/scripts/forms/form-validation.js"></script>
+     <script src="/irisresources/js/scripts/forms/form-validation.js"></script>
     <!-- BEGIN Vendor JS--> 
-    <script src="/iris/resources/vendors/js/forms/validation/jquery.validate.min.js"></script> 
+    <script src="/irisresources/vendors/js/forms/validation/jquery.validate.min.js"></script> 
 
     <!-- BEGIN: Page Vendor JS-->
-    <script src="/iris/resources//vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
-    <script src="/iris/resources//vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
-    <script src="/iris/resources//vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
-    <script src="/iris/resources//vendors/js/tables/datatable/responsive.bootstrap5.min.js"></script>
-    <script src="/iris/resources//vendors/js/tables/datatable/datatables.checkboxes.min.js"></script>
-    <script src="/iris/resources//vendors/js/tables/datatable/datatables.buttons.min.js"></script>
-    <script src="/iris/resources//vendors/js/tables/datatable/jszip.min.js"></script>
-    <script src="/iris/resources//vendors/js/tables/datatable/pdfmake.min.js"></script>
-    <script src="/iris/resources//vendors/js/tables/datatable/vfs_fonts.js"></script>
-    <script src="/iris/resources//vendors/js/tables/datatable/buttons.html5.min.js"></script>
-    <script src="/iris/resources//vendors/js/tables/datatable/buttons.print.min.js"></script>
-    <script src="/iris/resources//vendors/js/tables/datatable/dataTables.rowGroup.min.js"></script>
-    <script src="/iris/resources//vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+    <script src="/irisresources//vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+    <script src="/irisresources//vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
+    <script src="/irisresources//vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
+    <script src="/irisresources//vendors/js/tables/datatable/responsive.bootstrap5.min.js"></script>
+    <script src="/irisresources//vendors/js/tables/datatable/datatables.checkboxes.min.js"></script>
+    <script src="/irisresources//vendors/js/tables/datatable/datatables.buttons.min.js"></script>
+    <script src="/irisresources//vendors/js/tables/datatable/jszip.min.js"></script>
+    <script src="/irisresources//vendors/js/tables/datatable/pdfmake.min.js"></script>
+    <script src="/irisresources//vendors/js/tables/datatable/vfs_fonts.js"></script>
+    <script src="/irisresources//vendors/js/tables/datatable/buttons.html5.min.js"></script>
+    <script src="/irisresources//vendors/js/tables/datatable/buttons.print.min.js"></script>
+    <script src="/irisresources//vendors/js/tables/datatable/dataTables.rowGroup.min.js"></script>
+    <script src="/irisresources//vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
     <!-- END: Page Vendor JS-->
-      <script src="/iris/resources/js2/dataTables.material.min.js"  ></script>
-          <script src="/iris/resources/js2/jquery.dataTables-v.1.10.min.js"  ></script>
-              <script src="/iris/resources/vendors/js/extensions/moment.min.js"></script>
-    <script src="/iris/resources/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
-    <script src="/iris/resources/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
-    <script src="/iris/resources/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
-    <script src="/iris/resources/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
-    <script src="/iris/resources/vendors/js/tables/datatable/responsive.bootstrap5.js"></script>
+      <script src="/irisresources/js2/dataTables.material.min.js"  ></script>
+          <script src="/irisresources/js2/jquery.dataTables-v.1.10.min.js"  ></script>
+              <script src="/irisresources/vendors/js/extensions/moment.min.js"></script>
+    <script src="/irisresources/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+    <script src="/irisresources/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
+    <script src="/irisresources/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
+    <script src="/irisresources/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
+    <script src="/irisresources/vendors/js/tables/datatable/responsive.bootstrap5.js"></script>
     <!-- BEGIN: Theme JS-->
-     <script src="/iris/resources/js/scripts/components/components-bs-toast.min.js"></script>
-    <script src="/iris/resources//js/core/app-menu.min.js"></script>
-    <script src="/iris/resources//js/core/app.min.js"></script>
-    <script src="/iris/resources//js/scripts/customizer.min.js"></script>
+     <script src="/irisresources/js/scripts/components/components-bs-toast.min.js"></script>
+    <script src="/irisresources//js/core/app-menu.min.js"></script>
+    <script src="/irisresources//js/core/app.min.js"></script>
+    <script src="/irisresources//js/scripts/customizer.min.js"></script>
     <!-- END: Theme JS-->
-     <script src="/iris/resources/js2/datetime-moment-v1.10.12.js"  ></script>
+     <script src="/irisresources/js2/datetime-moment-v1.10.12.js"  ></script>
     <!-- BEGIN: Page JS-->
-    <script src="/iris/resources//js/scripts/tables/table-datatables-basic.min.js"></script>
+    <script src="/irisresources//js/scripts/tables/table-datatables-basic.min.js"></script>
     <!-- END: Page JS-->
-    <script src="/iris/resources/vendors/js/pickers/pickadate/picker.js"></script>
-    <script src="/iris/resources/vendors/js/pickers/pickadate/picker.date.js"></script>
-    <script src="/iris/resources/vendors/js/pickers/pickadate/picker.time.js"></script>
-    <script src="/iris/resources/vendors/js/pickers/pickadate/legacy.js"></script>
-    <script src="/iris/resources/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
-        <script src="/iris/resources/js/scripts/forms/pickers/form-pickers.min.js"></script>
+    <script src="/irisresources/vendors/js/pickers/pickadate/picker.js"></script>
+    <script src="/irisresources/vendors/js/pickers/pickadate/picker.date.js"></script>
+    <script src="/irisresources/vendors/js/pickers/pickadate/picker.time.js"></script>
+    <script src="/irisresources/vendors/js/pickers/pickadate/legacy.js"></script>
+    <script src="/irisresources/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+        <script src="/irisresources/js/scripts/forms/pickers/form-pickers.min.js"></script>
       
     <script>
  $(window).on('load',  function(){
@@ -575,7 +575,7 @@ font-size: 1rem!important;
 							},
 							
 							"bDestroy" : true,
-							"sAjaxSource" : "	<%=request.getContextPath()%>/ajax/get-role-iris?"+myParams,
+							"sAjaxSource" : "	<%=request.getContextPath()%>/ajax/get-role-nagpurCND?"+myParams,
 		        "aoColumns": [
 		        	 { "mData": function(data,type,row){
                       if($.trim(data.role_name) == ''){ return '-'; }else{ return i++ ; }
