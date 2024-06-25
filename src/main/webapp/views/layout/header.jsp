@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <!-- <meta name="google-signin-client_id" content="180023549420-4araucipo8cil4matp902f64cte57md9.apps.googleusercontent.com">
  --> 
- <script src="/iwm/resources/js/jQuery-v.3.5.min.js"  ></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
  <script src="https://accounts.google.com/gsi/client" onload="initClient()" async defer></script>
 <title>Header</title>
 

@@ -88,14 +88,14 @@ public class IrisUserController {
 		return model;
 	}
 	
-	@RequestMapping(value = "/add-role-iwm-user", method = {RequestMethod.GET,RequestMethod.POST})
+	@RequestMapping(value = "/add-role-nagpurCND-user", method = {RequestMethod.GET,RequestMethod.POST})
 	public ModelAndView addRoleIris(@ModelAttribute Role obj,RedirectAttributes attributes,HttpSession session) {
 		boolean flag = false;
 		String userId = null;
 		String siteName = null;
 		ModelAndView model = new ModelAndView();
 		try {
-			model.setViewName("redirect:/iwm-User");
+			model.setViewName("redirect:/nagpurCND-User");
 			userId = (String) session.getAttribute("USER_ID");
 			siteName = (String) session.getAttribute("USER_NAME");
 			obj.setCreated_by(userId);
@@ -114,7 +114,7 @@ public class IrisUserController {
 		return model;
 	} 
 	
-	@RequestMapping(value = "/iwm-accountinfo", method = {RequestMethod.POST, RequestMethod.GET})
+	@RequestMapping(value = "/nagpurCND-accountinfo", method = {RequestMethod.POST, RequestMethod.GET})
 	public ModelAndView irisaccountinfo(@ModelAttribute User user, HttpSession session) {
 		ModelAndView model = new ModelAndView(PageConstants.irisaccountinfo);
 		try {
@@ -131,14 +131,14 @@ public class IrisUserController {
 		return model;
 	}
 	
-	@RequestMapping(value = "/update-user-self-iwm", method = {RequestMethod.GET,RequestMethod.POST})
+	@RequestMapping(value = "/update-user-self-nagpurCND", method = {RequestMethod.GET,RequestMethod.POST})
 	public ModelAndView updateUserSelfIris(@ModelAttribute User obj,RedirectAttributes attributes,HttpSession session) {
 		boolean flag = false;
 		String userId = null;
 		String userName = null;
 		ModelAndView model = new ModelAndView();
 		try {
-			model.setViewName("redirect:/iwm-accountinfo");
+			model.setViewName("redirect:/nagpurCND-accountinfo");
 			userId = (String) session.getAttribute("USER_ID");
 			userName = (String) session.getAttribute("USER_NAME");
 			obj.setModified_by(userId);
@@ -345,7 +345,7 @@ public class IrisUserController {
 	}
 	
 	
-	@RequestMapping(value = "/ajax/get-users-iwm", method = { RequestMethod.POST, RequestMethod.GET })
+	@RequestMapping(value = "/ajax/get-users-nagpurCND", method = { RequestMethod.POST, RequestMethod.GET })
 	public void getUsersList(@ModelAttribute User obj, HttpServletRequest request,
 			HttpServletResponse response, HttpSession session) throws IOException {
 		PrintWriter pw = null;
@@ -444,14 +444,14 @@ public class IrisUserController {
 		return objList;
 	}
 	
-	@RequestMapping(value = "/add-user-iwm", method = {RequestMethod.GET,RequestMethod.POST})
+	@RequestMapping(value = "/add-user-nagpurCND", method = {RequestMethod.GET,RequestMethod.POST})
 	public ModelAndView addUserIris(@ModelAttribute User obj,RedirectAttributes attributes,HttpSession session) {
 		boolean flag = false;
 		String userId = null;
 		String userName = null;
 		ModelAndView model = new ModelAndView();
 		try {
-			model.setViewName("redirect:/iwm-User");
+			model.setViewName("redirect:/nagpurCND-User");
 			userId = (String) session.getAttribute("USER_ID");
 			userName = (String) session.getAttribute("USER_NAME");
 			if(StringUtils.isEmpty(obj.getCreated_by())) {
@@ -472,14 +472,14 @@ public class IrisUserController {
 		return model;
 	}
 	
-	@RequestMapping(value = "/update-user-iwm", method = {RequestMethod.GET,RequestMethod.POST})
+	@RequestMapping(value = "/update-user-nagpurCND", method = {RequestMethod.GET,RequestMethod.POST})
 	public ModelAndView updateUserIris(@ModelAttribute User obj,RedirectAttributes attributes,HttpSession session) {
 		boolean flag = false;
 		String userId = null;
 		String userName = null;
 		ModelAndView model = new ModelAndView();
 		try {
-			model.setViewName("redirect:/iwm-User");
+			model.setViewName("redirect:/nagpurCND-User");
 			userId = (String) session.getAttribute("USER_ID");
 			userName = (String) session.getAttribute("USER_NAME");
 			if(StringUtils.isEmpty(obj.getModified_by())) {

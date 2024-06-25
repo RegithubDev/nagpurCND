@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" href="/nagpurCND/resources//images/ico/apple-icon-120.html">
     <link rel="shortcut icon" type="image/x-icon" href="/nagpurCND/resources/images/logo/logo.svg">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
-
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- BEGIN: Vendor CSS-->
      <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/vendors/css/vendors.min.css">
     <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/vendors/css/forms/select/select2.min.css">
@@ -452,7 +452,7 @@ font-size: 1rem!important;
 							},
 							
 							"bDestroy" : true,
-							"sAjaxSource" : "	<%=request.getContextPath()%>/ajax/get-users-iwm?"+myParams,
+							"sAjaxSource" : "	<%=request.getContextPath()%>/ajax/get-users-nagpurCND?"+myParams,
 		        "aoColumns": [
 		        	 { "mData": function(data,type,row){
                       if($.trim(data.user_id) == ''){ return '-'; }else{ return i++ ; }

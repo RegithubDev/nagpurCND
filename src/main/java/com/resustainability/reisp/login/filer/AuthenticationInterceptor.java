@@ -1,12 +1,5 @@
 package com.resustainability.reisp.login.filer;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.security.GeneralSecurityException;
-import java.util.Collections;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -23,10 +16,6 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
-import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;
-import com.google.api.client.http.javanet.NetHttpTransport;
-import com.google.api.client.json.gson.GsonFactory;
 import com.resustainability.reisp.common.UrlGenerator;
 import com.resustainability.reisp.dao.UserDao;
 import  com.resustainability.reisp.model.User;
@@ -48,50 +37,68 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter{
 			requestURI = request.getRequestURI();
 			UrlGenerator ugObj = new UrlGenerator();
 			context_path = ugObj.getContextPath();
-			// Avoid a redirect loop for some urls
+			if(requestURI.equals("/"+context_path+"/reone/getNagpurList") &&  !requestURI.equals("/"+context_path+"/login")) {
+				 return true;
+			}
 			if(!request.getRequestURI().contains("@")){
-			if( !requestURI.equals("/"+context_path+"/") && !requestURI.equals("/"+context_path+"/sign-in") 
-					&& !requestURI.equals("/") && !requestURI.equals("/sign-in") 
-					&& !requestURI.equals("/"+context_path+"/someone-login") && !requestURI.equals("/someone-login") 
-					&& !requestURI.equals("/"+context_path+"/access-denied") && !request.getRequestURI().equals("/access-denied")){
-			    User userData = (User) request.getSession().getAttribute("user");
-			    if( requestURI.equals("/"+context_path+"/add-user-iris")) {
-					return true;
-				}
-			    if(requestURI.contains("reone")  ) {
-			    	return true;
-			    }
-			    if(!requestURI.equals("/"+context_path+"/sign-in-first") && userData == null){
-			    	if(request.getRequestURI().contains("/"+context_path+"/")){
-			    		response.sendRedirect("/"+context_path+"/sign-in");
-			    	}else{
-			    		response.sendRedirect("/sign-in");
-			    	}
-				    return false;
+			if( !requestURI.equals("/"+context_path+"/") && !requestURI.equals("/"+context_path+"/login") 
+					&& !requestURI.equals("/") && !requestURI.equals("/login") && !requestURI.equals("/"+context_path+"/logout")){
+				 User userData = (User) request.getSession().getAttribute("user");
+				 int session_count = 0;
+				 try {
+					// session_count =  checkUserLoginDetails(userData);
+				 	} finally {
+				 	   if(userData == null ){
+					    	if(request.getRequestURI().contains("/"+context_path+"/")){
+					    		//request.getSession().invalidate();
+					    		response.sendRedirect("/"+context_path+"/");
+					    		return true;
+					    	}else{
+					    		response.sendRedirect("/login");
+					    	}
+					    }
+				 	  if( session_count > 1 ){
+							/*
+							 * NamedParameterJdbcTemplate namedParamJdbcTemplate = new
+							 * NamedParameterJdbcTemplate(dataSource); String updateQry =
+							 * "update [user_audit_log] set user_logout_time=GETDATE()  where user_id= :user_id and user_logout_time is null or  user_logout_time = '' "
+							 * ; BeanPropertySqlParameterSource paramSource = new
+							 * BeanPropertySqlParameterSource(userData);
+							 * namedParamJdbcTemplate.update(updateQry, paramSource);
+							 */
+							/*
+							 * request.getSession().invalidate();
+							 * response.sendRedirect("/"+context_path+"/logout"); return false;
+							 */
+				 	  }
+				 	}
+			}else {
+				if( !requestURI.equals("/"+context_path+"/logout")){
+					 User userData = (User) request.getSession().getAttribute("user");
+					 String single_login_session_id = (String)request.getSession().getAttribute("SESSION_ID");
+					 if(userData != null){
+						 int session_count = 0;
+						 try {
+							// session_count =  checkUserLoginDetails(userData);
+							 if(session_count > 1) {
+								 request.getSession().invalidate();
+								 response.sendRedirect("/"+context_path+"/");
+							 }else {
+								 response.sendRedirect("/"+context_path+"/home");
+							 }
+						 	} finally {}
+					 }
 				}
 			}
-		   }
+		  }else {
+			  return true;
+		}
 		} catch (Exception e) {
-			e.printStackTrace();
 			logger.error("preHandle : " + e.getMessage());
 			return false;
 		}
 		  return true;
 	}
-	private static boolean checkSignIn(String clientId, String idToken) {
-        try {
-            GoogleIdTokenVerifier verifier = new GoogleIdTokenVerifier.Builder(new NetHttpTransport(), new GsonFactory())
-                    .setAudience(Collections.singletonList(clientId))
-                    .build();
-
-            GoogleIdToken token = verifier.verify(idToken);
-            return token != null;
-        } catch (GeneralSecurityException | IOException e) {
-            e.printStackTrace();
-        }
-
-        return false;
-    }
 	public int checkUserLoginDetails(User obj) throws Exception {
 		int totalRecords = 0;
 		try {

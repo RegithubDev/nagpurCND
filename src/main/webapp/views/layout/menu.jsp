@@ -7,6 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>menu</title>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style>
 
 
@@ -63,28 +64,6 @@ div.main-menu-content {
           			 $('#settings').addClass('active');
 	           		}else if(url.indexOf('nagpurCND-User') != -1 || url.indexOf('/update-irm-form') != -1){
 	           			$('#settings').addClass('active');
-	           		}else if(url.indexOf('data') != -1){
-	           			$('#datamanagement').addClass('active');
-	           		}else if(url.indexOf('product') != -1){
-	           			$('#settings').addClass('active');
-	           		}else if(url.indexOf('settings') != -1){
-	           			$('#settings').addClass('active');
-	           		}else if(url.indexOf('sbu') != -1){
-	           			$('#settings').addClass('active');
-	           		}else if(url.indexOf('category') != -1){
-	           			$('#settings').addClass('active');
-	           		}else if(url.indexOf('city') != -1){
-	           			$('#settings').addClass('active');
-	           		}else if(url.indexOf('state') != -1){
-	           			$('#settings').addClass('active');
-	           		}else if(url.indexOf('role') != -1){
-	           			$('#settings').addClass('active');
-	           		}else if(url.indexOf('management') != -1){
-	           			$('#managementdasboard').addClass('active');
-	           		}else if(url.indexOf('/helpdesk') != -1){
-	           			$('#helpdesk').addClass('active');
-	           		}else if(url.indexOf('/remainder') != -1){
-	           			$('#remainder').addClass('active');
 	           		}else{
 	           			$('#home').addClass('active');
 	           		}

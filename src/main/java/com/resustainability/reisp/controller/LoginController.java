@@ -93,7 +93,7 @@ public class LoginController {
 	}
 	
 	
-	@RequestMapping(value = "/sign-in", method = {RequestMethod.POST, RequestMethod.GET})
+	@RequestMapping(value = "/login", method = {RequestMethod.POST, RequestMethod.GET})
 	public ModelAndView login(@ModelAttribute User user, HttpSession session,HttpServletRequest request,RedirectAttributes attributes) {
 		ModelAndView model = new ModelAndView(PageConstants.login);
 		User userDetails = null;
@@ -227,7 +227,7 @@ public class LoginController {
 			//service.UserLogOutActions(user);
 			session.invalidate();
 			//model.addObject("success", logOutMessage);
-			model.setViewName("redirect:/sign-in");
+			model.setViewName("redirect:/");
 		} catch (Exception e) {
 			logger.fatal("logut() : "+e.getMessage());
 		}

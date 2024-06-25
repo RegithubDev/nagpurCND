@@ -13,7 +13,11 @@ public class IRM {
 	approver_type,	approver_code	,otp,otp_code,	assigned_on,employee_code,	action_taken,incident_code,	corrective_action,location_code,from_date,to_date,	preventive_action,user_name,
 	approver_name,	remarks,approver_type_before,employee_code_before,not_assigned, statusChanged,next_level_user,approver_type_name,from_and_to,sbu_code,sbu_name,role,user,
 	admin_incidents , i_pending ,i_completed,sb_rei_notes,person_location,reinitiate_date,sb_date,ca_before,pa_before,remarks_before,doc_before,type_prevs,approver_prvs,
-		AC,NM,UA,UC,ACT,NMT,UAT,UCT,created_datetime,expired_datetime,TotalVisits,ActiveVistis,incativeVistis,customerId,Plantname,CustomerID,ActualMonthAndYear,	person_responsible,message,module_type	,doc,capa_id,rca_id,noCounts,tentative_date,investigation_team,base_role,base_department,daysNotLogined,incidents_count	,counts,ca,pa,level_status,	attachments,incident_types,	incident_seviourity,incident_category,	ua_type,	uc_type,	management_type	;
+		AC,NM,UA,UC,ACT,NMT,UAT,UCT,created_datetime,expired_datetime,TotalVisits,ActiveVistis,incativeVistis,
+		customerId,Plantname,CustomerID,ActualMonthAndYear,	person_responsible,message,module_type	
+		,doc,capa_id,rca_id,noCounts,tentative_date,investigation_team,base_role,base_department,
+		daysNotLogined,incidents_count	,counts,ca,pa,level_status,	attachments,incident_types,	incident_seviourity,incident_category,	ua_type,	uc_type,	management_type,
+		SumNetWT_TodayAndYesterday,SumNetWT_Today,SumNetWT_ThisMonth;
 
 	List<IRM> irmFilesList;
 	List<IRM> irmIncidentsList;
@@ -23,6 +27,30 @@ public class IRM {
 	private MultipartFile[] mediaList;
 	
 	
+	public String getSumNetWT_TodayAndYesterday() {
+		return SumNetWT_TodayAndYesterday;
+	}
+
+	public void setSumNetWT_TodayAndYesterday(String sumNetWT_TodayAndYesterday) {
+		SumNetWT_TodayAndYesterday = sumNetWT_TodayAndYesterday;
+	}
+
+	public String getSumNetWT_Today() {
+		return SumNetWT_Today;
+	}
+
+	public void setSumNetWT_Today(String sumNetWT_Today) {
+		SumNetWT_Today = sumNetWT_Today;
+	}
+
+	public String getSumNetWT_ThisMonth() {
+		return SumNetWT_ThisMonth;
+	}
+
+	public void setSumNetWT_ThisMonth(String sumNetWT_ThisMonth) {
+		SumNetWT_ThisMonth = sumNetWT_ThisMonth;
+	}
+
 	public String getPlant() {
 		return plant;
 	}

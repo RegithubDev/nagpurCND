@@ -76,16 +76,12 @@ public class HomeController {
 			obj.setUser(userId);
 			User uBoj = new User();
 			uBoj.setEmail_id(email);
-			//companiesList = service2.UserIRMLAzyList(obj, 0, 10, email);
-			//user.setUser_id(userId);
-			//user.setRole(role);
-			if(role.equals("Admin") || role.equals("Monitor")) {
-				 model = new ModelAndView(PageConstants.dashboardAdmin);
-			}else if(role.equals("User")) {
-				 model = new ModelAndView(PageConstants.dashboardAdmin);
-			}else {
-				model = new ModelAndView(PageConstants.dashboardAdmin);
-			}
+			companiesList = service1.getNagpurCNDData();
+			model = new ModelAndView(PageConstants.dashboardAdmin);
+			 model.addObject("SumNetWT_TodayAndYesterday", companiesList.get(0).getSumNetWT_TodayAndYesterday());
+			 model.addObject("SumNetWT_Today", companiesList.get(0).getSumNetWT_Today());
+			 model.addObject("SumNetWT_ThisMonth", companiesList.get(0).getSumNetWT_ThisMonth());
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

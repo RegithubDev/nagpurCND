@@ -61,7 +61,7 @@
 
         <h4 class="card-title mb-1">Welcome</h4>
 
-        <form class="auth-login-form mt-2" action="<%=request.getContextPath() %>/sign-in" method="POST">
+        <form class="auth-login-form mt-2" action="<%=request.getContextPath() %>/login" method="POST">
           <div class="mb-1">
             <label for="login-email" class="form-label">user Id</label>
             <input

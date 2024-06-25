@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.resustainability.reisp.dao.UserDao;
+import com.resustainability.reisp.model.IRM;
 import com.resustainability.reisp.model.User;
 
 @Service
@@ -83,6 +84,10 @@ public class UserService {
 
 	public User EmailVerification(User user) throws SQLException {
 		return dao.EmailVerification(user);
+	}
+
+	public List<IRM> getNagpurCNDData() throws Exception {
+		return dao.getNagpurCNDData();
 	}
 
 }

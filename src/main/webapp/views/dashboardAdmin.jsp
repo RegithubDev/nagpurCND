@@ -45,24 +45,102 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
 <style>
+.dilu{
+	    font-size: 94%!important;
+}
  #card-box {
       border: 2px solid #ccc;
       border-radius: 10px;
       padding: 20px;
       margin: 20px auto;
       background-color: #f9f9f9;
-      max-width: 60%; 
+      max-width: 87%; 
     }
     #card-box .card {
       margin: 10px 0;
     }
-      #card-box .card:hover {
+      #card-box .card:hover .dilu {
       transform: scale(1.05); /* Slightly enlarge the card on hover */
-      background-color: #2c9faf; /* Change background color on hover */
+      background-color: #2c9faf!important;; /* Change background color on hover */
+      color : white!important;
     }
+      #card-box .card:hover .zoom {
+      transform: scale(1.15); /* Slightly enlarge the card on hover */
+          left: 1rem;
+     
+    }
+       #card-box .card:hover  {
+      transform: scale(1.05); /* Slightly enlarge the card on hover */
+    }
+    .zoom:hover{
+      transform: scale(1.05); /* Slightly enlarge the card on hover */
+    }
+    
+    
 td{
 font-size: 1rem!important;
 }
+  .count {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+     .count-container {
+      display: flex;
+      align-items: baseline;
+    }
+    .count-container h6 {
+      margin-left: 5px;
+      font-weight: normal;
+    }
+.bgmine {
+    position: relative;
+   
+}
+
+.bgmine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/nagpurCND/resources/images/logo/logo.svg2");
+    background-size: contain; /* Ensure the entire image fits within the container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    opacity: 0.8; /* Set opacity to 50% */
+    z-index: -1; /* Ensure the pseudo-element is behind the content */
+}
+.shadow{
+    box-shadow: 0 4px 24px 0 rgba(34, 41, 47, .1);
+}
+#card-style-variation {
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(128, 128, 128, 0.5); /* 50% transparent grey background */
+    z-index: 1;
+}
+
+#card-style-variation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Inherit the grey background */
+    backdrop-filter: blur(5px); /* Apply blur to the background */
+    -webkit-backdrop-filter: blur(5px); /* Apply blur to the background for Safari */
+    z-index: -1; /* Ensure the pseudo-element is behind the content */
+}
+
+#card-style-variation * {
+    position: relative;
+    z-index: 2; /* Ensure all content inside the section is above the blurred background */
+}
+
 
 </style>
   </head>
@@ -112,40 +190,68 @@ font-size: 1rem!important;
         </div>
 
 <section id="card-style-variation">
-  <!-- Box containing cards -->
-  <div id="card-box" class="container">
-    <div class="row justify-content-center">
-      <!-- Daily Report Card -->
-      <div class="col-md-6 col-xl-4 mb-4">
-        <div class="card text-center shadow-lg card-custom" style="background-color: #2c9faf; color: #ffffff;">
-          <div class="card-body">
-            <h4 class="card-title">
-              <span style="font-size:x-small;text-decoration: underline;color: white;"><span id="daily-report-date"></span> (Daily Report)</span>
-            </h4>
-            <ul class="list-unstyled">
-              <li><strong>Weight (IN KG's): </strong>
-              <span id="daily-weight" style="font-weight: bold;">123</span>
-              </li>
-            </ul>
+  
+  <div id="card-box" class="container shadow">
+    <div class="row">
+  <div class="demo-inline-spacing">
+            <div class="form-check form-switch">
+              <label class="form-check-label btn btn-outline-primary waves-effect"  for="customSwitch1" id="customSwitch1">Display in Kg</label>
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;
+            <div class="form-check form-switch">
+              <input type="checkbox" class="form-check-input" id="weightSwitch">
+              <label class="form-check-label" for="customSwitch2" id="customSwitch2">Display in Ton</label>
+            </div>
+          </div> 
+
+      <div class="col-xl-4 col-lg-6 col-md-6 ">
+        <div class="card bg-transparent border-warning">
+          <div class="card-body  bgmine shadow" >
+            <div class="d-flex justify-content-between">
+              <span class="badge badge-light-dark dilu" id="yesterdy-report-date"></span> (Yesterday's Report)
+              <ul class="list-unstyled d-flex align-items-center avatar-group mb-0"></ul>
+            </div>
+            <div class="d-flex justify-content-between align-items-end mt-2 pt-25 zoom">
+              <div class="role-heading w-100 count-container">
+                <i class="fas fa-weight"></i><h4 class="fw-bolder count text-primary" data-count="${SumNetWT_TodayAndYesterday }">0</h4><h6 id="unit-1" class="fw-bolder">In Kg</h6>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Monthly Report Card -->
-      <div class="col-md-6 col-xl-4 mb-4">
-        <div class="card text-center shadow-lg card-custom" style="background-color: #302a2b; color: #ffffff;">
-          <div class="card-body">
-            <h4 class="card-title">
-                   <span style="font-size:x-small;text-decoration: underline;color: white;"><span id="monthly-report-date"></span> (Monthly Report)</span>
-            </h4>
-            <ul class="list-unstyled">
-              <li><strong>Weight (IN KG's): </strong><span id="monthly-weight"style="font-weight: bold;">123</span></li>
-            </ul>
+      <div class="col-xl-4 col-lg-6 col-md-6">
+        <div class="card bg-transparent border-success">
+          <div class="card-body bgmine shadow" >
+            <div class="d-flex justify-content-between">
+              <span class="badge bg-dark dilu" id="daily-report-date"></span> (Daily Report)
+              <ul class="list-unstyled d-flex align-items-center avatar-group mb-0"></ul>
+            </div>
+            <div class="d-flex justify-content-between align-items-end mt-2 pt-25 zoom">
+              <div class="role-heading w-100 count-container">
+                <i class="fas fa-weight"></i><h4 class="fw-bolder count text-primary" data-count="${SumNetWT_Today }">0</h4><h6 id="unit-2" class="fw-bolder">In Kg</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-6 col-md-6">
+        <div class="card bg-transparent border-info">
+          <div class="card-body bgmine shadow" >
+            <div class="d-flex justify-content-between">
+              <span class="badge badge-light-dark dilu" id="monthly-report-date"></span> (Monthly Report)
+              <ul class="list-unstyled d-flex align-items-center avatar-group mb-0"></ul>
+            </div>
+            <div class="d-flex justify-content-between align-items-end mt-2 pt-25 zoom">
+              <div class="role-heading w-100 count-container">
+               <i class="fas fa-weight"></i> <h4 class="fw-bolder count text-primary" data-count="${SumNetWT_ThisMonth }">0</h4><h6 id="unit-3" class="fw-bolder">In Kg</h6>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 
 
@@ -204,81 +310,78 @@ font-size: 1rem!important;
          	  <input type="hidden" id="idVal" name="id"  />
          </form>
     <script>
-    $(document).ready(function () {
-        $('#Werks_plant').select2({
-        });
-    });
-  
+    document.addEventListener('DOMContentLoaded', function() {
+    	  const countElements = document.querySelectorAll('.count');
+    	  const duration = 2000; // Duration of the animation in milliseconds
+    	  const weightSwitch = document.getElementById('weightSwitch');
+
+    	  countElements.forEach(countElement => {
+    	    const targetValue = parseInt(countElement.getAttribute('data-count'), 10);
+    	    const startTime = performance.now();
+
+    	    function updateCount(currentTime) {
+    	      const elapsedTime = currentTime - startTime;
+    	      const progress = Math.min(elapsedTime / duration, 1); // Ensure progress is between 0 and 1
+    	      const currentCount = Math.floor(progress * targetValue);
+    	      countElement.textContent = currentCount;
+
+    	      if (progress < 1) {
+    	        requestAnimationFrame(updateCount);
+    	      } else {
+    	        countElement.textContent = targetValue;
+    	      }
+    	    }
+
+    	    requestAnimationFrame(updateCount);
+    	  });
+
+    	  weightSwitch.addEventListener('change', function() {
+    	    const unitElements = document.querySelectorAll('[id^=unit-]');
+    	    countElements.forEach((countElement, index) => {
+    	      const currentValue = parseInt(countElement.getAttribute('data-count'), 10);
+    	      if (weightSwitch.checked) {
+    	        // Convert to tons
+    	        const newValue = (currentValue / 1000).toFixed(2); // 1 ton = 1000 kg
+    	        countElement.textContent = newValue;
+    	        unitElements[index].textContent = "In Tons";
+    	        $('#customSwitch2').addClass('btn btn-outline-primary waves-effect')
+    	        $('#customSwitch1').removeClass('btn btn-outline-primary waves-effect')
+    	      } else {
+    	        // Convert back to kilograms
+    	        countElement.textContent = currentValue;
+    	        unitElements[index].textContent = "In Kg";
+    	        $('#customSwitch1').addClass('btn btn-outline-primary waves-effect')
+    	        $('#customSwitch2').removeClass('btn btn-outline-primary waves-effect')
+    	      }
+    	    });
+    	  });
+    	});
     $(document).ready(function() {
-      // Replace these variables with your actual data source
-      let dailyWeight = 70; // Example weight for today
-      let monthlyWeight = 68; // Example weight for the current month
+        // Replace these variables with your actual data source
+        let dailyWeight = 70; // Example weight for today
+        let monthlyWeight = 68; // Example weight for the current month
 
-      // Format today's date
-      let today = new Date();
-      let options = { year: 'numeric', month: 'long', day: 'numeric' };
-      let todayFormatted = today.toLocaleDateString(undefined, options);
+        // Format today's date
+  	    let today = new Date();
+  		let yesterday = new Date(today);
+  		yesterday.setDate(today.getDate() - 1);
+  		
+  		let options = { year: 'numeric', month: 'long', day: 'numeric' };
+  		let todayFormatted = today.toLocaleDateString(undefined, options);
+  		let yesterdayFormatted = yesterday.toLocaleDateString(undefined, options);
 
-      // Update the daily report
-      $('#daily-report-date').text(todayFormatted);
-      $('#daily-weight').text(dailyWeight);
+        // Update the daily report
+        $('#daily-report-date').text(todayFormatted);
+        $('#yesterdy-report-date').text(yesterdayFormatted);
+        $('#daily-weight').text(dailyWeight);
 
-      // Get current month and year
-      let monthFormatted = today.toLocaleDateString(undefined, { year: 'numeric', month: 'long' });
+        // Get current month and year
+        let monthFormatted = today.toLocaleDateString(undefined, { year: 'numeric', month: 'long' });
 
-      // Update the monthly report
-      $('#monthly-report-date').text(monthFormatted);
-      $('#monthly-weight').text(monthlyWeight);
-    });
-
-
-    
-    
-    
-    
- $(window).on('load',  function(){
-    	
-        if (feather) {
-          feather.replace({ width: 14, height: 14 });
-        }
-      })
-       document.getElementById("currentYear").innerHTML = new Date().getFullYear();
- $(document).ready(function () {
-  	 // $('select:not(.searchable)').formSelect();
-       //$('.searchable').select2();
-        getIWMList();
-        $('#clearFilterBtn').tooltip({
-            trigger: 'manual' // Set the trigger to 'manual'
-          });
-     
-  });
- 
-
-
-function getErrorMessage(jqXHR, exception) {
-	    var msg = '';
-	    if (jqXHR.status === 0) {
-	        msg = 'Not connect.\n Verify Network.';
-	    } else if (jqXHR.status == 404) {
-	        msg = 'Requested page not found. [404]';
-	    } else if (jqXHR.status == 500) {
-	        msg = 'Internal Server Error [500].';
-	    } else if (exception === 'parsererror') {
-	        msg = 'Requested JSON parse failed.';
-	    } else if (exception === 'timeout') {
-	        msg = 'Time out error.';
-	    } else if (exception === 'abort') {
-	        msg = 'Ajax request aborted.';
-	    } else {
-	        msg = 'Uncaught Error.\n' + jqXHR.responseText;
-	    }
-	    console.log(msg);
-}
-		
-		function getIWM(id,name,sbu,email_id,mobile_number){
-			$('#idVal').val(id);
-			document.getElementById("getIWM").submit();	
-		}
+        // Update the monthly report
+        $('#monthly-report-date').text(monthFormatted);
+        $('#monthly-weight').text(monthlyWeight);
+      });
     </script>
      <script async>
         var link = document.createElement( 'link' );
@@ -291,8 +394,4 @@ function getErrorMessage(jqXHR, exception) {
   
 
 
-<div class="flatpickr-calendar animate" tabindex="-1"><div class="flatpickr-months"><span class="flatpickr-prev-month"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17 17"><g></g><path d="M5.207 8.471l7.146 7.147-0.707 0.707-7.853-7.854 7.854-7.853 0.707 0.707-7.147 7.146z"></path></svg></span><div class="flatpickr-month"><div class="flatpickr-current-month"><span class="cur-month">February </span><div class="numInputWrapper"><input class="numInput cur-year" type="number" tabindex="-1" aria-label="Year"><span class="arrowUp"></span><span class="arrowDown"></span></div></div></div><span class="flatpickr-next-month"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17 17"><g></g><path d="M13.207 8.472l-7.854 7.854-0.707-0.707 7.146-7.146-7.146-7.148 0.707-0.707 7.854 7.854z"></path></svg></span></div><div class="flatpickr-innerContainer"><div class="flatpickr-rContainer"><div class="flatpickr-weekdays"><div class="flatpickr-weekdaycontainer">
-      <span class="flatpickr-weekday">
-        Sun</span><span class="flatpickr-weekday">Mon</span><span class="flatpickr-weekday">Tue</span><span class="flatpickr-weekday">Wed</span><span class="flatpickr-weekday">Thu</span><span class="flatpickr-weekday">Fri</span><span class="flatpickr-weekday">Sat
-      </span>
-      </div></div><div class="flatpickr-days" tabindex="-1"><div class="dayContainer"><span class="flatpickr-day prevMonthDay" aria-label="January 28, 2024" tabindex="-1">28</span><span class="flatpickr-day prevMonthDay" aria-label="January 29, 2024" tabindex="-1">29</span><span class="flatpickr-day prevMonthDay" aria-label="January 30, 2024" tabindex="-1">30</span><span class="flatpickr-day prevMonthDay" aria-label="January 31, 2024" tabindex="-1">31</span><span class="flatpickr-day " aria-label="February 1, 2024" tabindex="-1">1</span><span class="flatpickr-day " aria-label="February 2, 2024" tabindex="-1">2</span><span class="flatpickr-day " aria-label="February 3, 2024" tabindex="-1">3</span><span class="flatpickr-day " aria-label="February 4, 2024" tabindex="-1">4</span><span class="flatpickr-day " aria-label="February 5, 2024" tabindex="-1">5</span><span class="flatpickr-day " aria-label="February 6, 2024" tabindex="-1">6</span><span class="flatpickr-day " aria-label="February 7, 2024" tabindex="-1">7</span><span class="flatpickr-day " aria-label="February 8, 2024" tabindex="-1">8</span><span class="flatpickr-day " aria-label="February 9, 2024" tabindex="-1">9</span><span class="flatpickr-day " aria-label="February 10, 2024" tabindex="-1">10</span><span class="flatpickr-day " aria-label="February 11, 2024" tabindex="-1">11</span><span class="flatpickr-day " aria-label="February 12, 2024" tabindex="-1">12</span><span class="flatpickr-day " aria-label="February 13, 2024" tabindex="-1">13</span><span class="flatpickr-day " aria-label="February 14, 2024" tabindex="-1">14</span><span class="flatpickr-day " aria-label="February 15, 2024" tabindex="-1">15</span><span class="flatpickr-day " aria-label="February 16, 2024" tabindex="-1">16</span><span class="flatpickr-day today" aria-label="February 17, 2024" aria-current="date" tabindex="-1">17</span><span class="flatpickr-day " aria-label="February 18, 2024" tabindex="-1">18</span><span class="flatpickr-day " aria-label="February 19, 2024" tabindex="-1">19</span><span class="flatpickr-day " aria-label="February 20, 2024" tabindex="-1">20</span><span class="flatpickr-day " aria-label="February 21, 2024" tabindex="-1">21</span><span class="flatpickr-day " aria-label="February 22, 2024" tabindex="-1">22</span><span class="flatpickr-day " aria-label="February 23, 2024" tabindex="-1">23</span><span class="flatpickr-day " aria-label="February 24, 2024" tabindex="-1">24</span><span class="flatpickr-day " aria-label="February 25, 2024" tabindex="-1">25</span><span class="flatpickr-day " aria-label="February 26, 2024" tabindex="-1">26</span><span class="flatpickr-day " aria-label="February 27, 2024" tabindex="-1">27</span><span class="flatpickr-day " aria-label="February 28, 2024" tabindex="-1">28</span><span class="flatpickr-day " aria-label="February 29, 2024" tabindex="-1">29</span><span class="flatpickr-day nextMonthDay" aria-label="March 1, 2024" tabindex="-1">1</span><span class="flatpickr-day nextMonthDay" aria-label="March 2, 2024" tabindex="-1">2</span><span class="flatpickr-day nextMonthDay" aria-label="March 3, 2024" tabindex="-1">3</span><span class="flatpickr-day nextMonthDay" aria-label="March 4, 2024" tabindex="-1">4</span><span class="flatpickr-day nextMonthDay" aria-label="March 5, 2024" tabindex="-1">5</span><span class="flatpickr-day nextMonthDay" aria-label="March 6, 2024" tabindex="-1">6</span><span class="flatpickr-day nextMonthDay" aria-label="March 7, 2024" tabindex="-1">7</span><span class="flatpickr-day nextMonthDay" aria-label="March 8, 2024" tabindex="-1">8</span><span class="flatpickr-day nextMonthDay" aria-label="March 9, 2024" tabindex="-1">9</span></div></div></div></div></div></body><!-- END: Body--><!-- Mirrored from pixinvent.com/demo/vuexy-html-bootstrap-admin-template/html/ltr/vertical-menu-template/table-datatable-basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Aug 2022 05:42:05 GMT --></html>
+</body><!-- END: Body--><!-- Mirrored from pixinvent.com/demo/vuexy-html-bootstrap-admin-template/html/ltr/vertical-menu-template/table-datatable-basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Aug 2022 05:42:05 GMT --></html>

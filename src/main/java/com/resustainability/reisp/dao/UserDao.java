@@ -23,6 +23,7 @@ import org.springframework.util.StringUtils;
 
 import com.resustainability.reisp.common.EncryptDecrypt;
 import com.resustainability.reisp.common.DBConnectionHandler;
+import com.resustainability.reisp.model.IRM;
 import com.resustainability.reisp.model.User;
 
 @Repository
@@ -1509,6 +1510,70 @@ public class UserDao {
 	public User EmailVerification(User user) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public List<IRM> getNagpurCNDData() throws Exception {
+		List<IRM> objsList = new ArrayList<IRM>();
+		try {
+			String qry = "SELECT  "
+					+ "    SITEID as TransactionNo1, "
+					+ "    Trno as TransactionNo2, "
+					+ "    TRANSPORTER as Transporter, "
+					+ "    PARTY as Transferstation, "
+					+ "    Vehicleno as VehicleNo, "
+					+ "    Material as Zone, "
+					+ "    Party as Location, "
+					+ "    Transporter as Transporter, "
+					+ "    LEFT(CONVERT(varchar, Datein, 24), 10) AS DateIN, "
+					+ "    LEFT(CONVERT(varchar, Timein, 24), 8) AS TimeIN, "
+					+ "    LEFT(CONVERT(varchar, Dateout, 24), 10) AS DateOUT, "
+					+ "    LEFT(CONVERT(varchar, Timeout, 24), 8) AS TimeOUT, "
+					+ "    Firstweight as GROSSWeight, "
+					+ "    SiteID, "
+					+ "    Secondweight as TareWeight, "
+					+ "    NetWT as NetWeight, "
+					+ "    typeofwaste AS TypeofMaterial, "
+					+ "    SUM(CASE  "
+					+ "            WHEN CAST(Dateout AS DATE) = CAST(GETDATE() AS DATE)  "
+					+ "                 OR CAST(Dateout AS DATE) = CAST(DATEADD(DAY, -1, GETDATE()) AS DATE)  "
+					+ "            THEN NetWT  "
+					+ "            ELSE 0  "
+					+ "        END) OVER () AS SumNetWT_TodayAndYesterday, "
+					+ "    SUM(CASE  "
+					+ "            WHEN CAST(Dateout AS DATE) = CAST(GETDATE() AS DATE)  "
+					+ "            THEN NetWT  "
+					+ "            ELSE 0  "
+					+ "        END) OVER () AS SumNetWT_Today, "
+					+ "    SUM(CASE  "
+					+ "            WHEN YEAR(Dateout) = YEAR(GETDATE()) AND MONTH(Dateout) = MONTH(GETDATE())  "
+					+ "            THEN NetWT  "
+					+ "            ELSE 0  "
+					+ "        END) OVER () AS SumNetWT_ThisMonth "
+					+ "FROM  "
+					+ "    [All_CnD_Sites].[dbo].[WEIGHT] WITH (nolock) "
+					+ "WHERE  "
+					+ "    (Trno IS NOT NULL) AND  "
+					+ "    (Vehicleno IS NOT NULL) AND  "
+					+ "    (Datein IS NOT NULL) AND "
+					+ "    (Timein IS NOT NULL) AND  "
+					+ "    (Firstweight IS NOT NULL) AND  "
+					+ "    (Dateout IS NOT NULL) AND  "
+					+ "    (Timeout IS NOT NULL) AND  "
+					+ "    (Secondweight IS NOT NULL) AND  "
+					+ "    (NetWT IS NOT NULL) AND  "
+					+ "    (SiteID IS NOT NULL) AND  "
+					+ "    NetWT <> '' AND  "
+					+ "    [SITEID] = 'NAGPURCND_WB1' "
+					+ "ORDER BY  "
+					+ "    Trno DESC; "
+					+ "";
+	
+			objsList = jdbcTemplate.query( qry, new BeanPropertyRowMapper<IRM>(IRM.class));
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new Exception(e);
+		}
+		return objsList;
 	}
 
 	
