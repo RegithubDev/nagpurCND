@@ -195,21 +195,27 @@ font-size: 1rem!important;
     <div class="row">
   <div class="demo-inline-spacing">
             <div class="form-check form-switch">
-              <label class="form-check-label btn btn-outline-primary waves-effect"  for="customSwitch1" id="customSwitch1">Display in Kg</label>
+             <input type="hidden" class="form-check-input" >
+              <span class=" badge bg-info p-2 btn-outline-info text-white"  for="customSwitch1" id="customSwitch1">Display in Kg</span>
             </div>&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;
             <div class="form-check form-switch">
               <input type="checkbox" class="form-check-input" id="weightSwitch">
-              <label class="form-check-label" for="customSwitch2" id="customSwitch2">Display in Ton</label>
+              <span class="badge badge-light-secondary p-2 btn-outline-info text-white" id="customSwitch2">Display in Ton</span>
             </div>
           </div> 
 
       <div class="col-xl-4 col-lg-6 col-md-6 ">
         <div class="card bg-transparent border-warning">
           <div class="card-body  bgmine shadow" >
-            <div class="d-flex justify-content-between">
-              <span class="badge badge-light-dark dilu" id="yesterdy-report-date"></span> (Yesterday's Report)
-              <ul class="list-unstyled d-flex align-items-center avatar-group mb-0"></ul>
+        <div class="d-flex justify-content-between align-items-center mb-1">
+          <div class="d-flex flex-row">
+            <div class="user-info">
+               <span class="badge badge-light-dark dilu" id="yesterdy-report-date"></span>
             </div>
+          </div>
+          <span class="badge rounded-pill badge-light-warning">(Yesterday's Weight)</span>
+        </div>
+        
             <div class="d-flex justify-content-between align-items-end mt-2 pt-25 zoom">
               <div class="role-heading w-100 count-container">
                 <i class="fas fa-weight"></i><h4 class="fw-bolder count text-primary" data-count="${SumNetWT_TodayAndYesterday }">0</h4><h6 id="unit-1" class="fw-bolder">In Kg</h6>
@@ -221,10 +227,14 @@ font-size: 1rem!important;
       <div class="col-xl-4 col-lg-6 col-md-6">
         <div class="card bg-transparent border-success">
           <div class="card-body bgmine shadow" >
-            <div class="d-flex justify-content-between">
-              <span class="badge bg-dark dilu" id="daily-report-date"></span> (Daily Report)
-              <ul class="list-unstyled d-flex align-items-center avatar-group mb-0"></ul>
+         <div class="d-flex justify-content-between align-items-center mb-1">
+          <div class="d-flex flex-row">
+            <div class="user-info">
+               <span class="badge bg-dark dilu" id="daily-report-date"></span>
             </div>
+          </div>
+          <span class="badge rounded-pill badge-light-primary">(Today Weight)</span>
+        </div>
             <div class="d-flex justify-content-between align-items-end mt-2 pt-25 zoom">
               <div class="role-heading w-100 count-container">
                 <i class="fas fa-weight"></i><h4 class="fw-bolder count text-primary" data-count="${SumNetWT_Today }">0</h4><h6 id="unit-2" class="fw-bolder">In Kg</h6>
@@ -236,10 +246,16 @@ font-size: 1rem!important;
       <div class="col-xl-4 col-lg-6 col-md-6">
         <div class="card bg-transparent border-info">
           <div class="card-body bgmine shadow" >
-            <div class="d-flex justify-content-between">
-              <span class="badge badge-light-dark dilu" id="monthly-report-date"></span> (Monthly Report)
-              <ul class="list-unstyled d-flex align-items-center avatar-group mb-0"></ul>
+          
+          <div class="d-flex justify-content-between align-items-center mb-1">
+          <div class="d-flex flex-row">
+            <div class="user-info">
+               <span class="badge badge-light-dark dilu" id="monthly-report-date"></span>
             </div>
+          </div>
+          <span class="badge rounded-pill badge-light-warning">(Monthly Report)</span>
+        </div>
+     
             <div class="d-flex justify-content-between align-items-end mt-2 pt-25 zoom">
               <div class="role-heading w-100 count-container">
                <i class="fas fa-weight"></i> <h4 class="fw-bolder count text-primary" data-count="${SumNetWT_ThisMonth }">0</h4><h6 id="unit-3" class="fw-bolder">In Kg</h6>
@@ -344,14 +360,18 @@ font-size: 1rem!important;
     	        const newValue = (currentValue / 1000).toFixed(2); // 1 ton = 1000 kg
     	        countElement.textContent = newValue;
     	        unitElements[index].textContent = "In Tons";
-    	        $('#customSwitch2').addClass('btn btn-outline-primary waves-effect')
-    	        $('#customSwitch1').removeClass('btn btn-outline-primary waves-effect')
+    	        $('#customSwitch2').addClass(' bg-info')
+    	        $('#customSwitch2').removeClass(' badge-light-secondary')
+    	        $('#customSwitch1').removeClass(' bg-info')
+    	        $('#customSwitch1').addClass(' badge-light-secondary')
     	      } else {
     	        // Convert back to kilograms
     	        countElement.textContent = currentValue;
     	        unitElements[index].textContent = "In Kg";
-    	        $('#customSwitch1').addClass('btn btn-outline-primary waves-effect')
-    	        $('#customSwitch2').removeClass('btn btn-outline-primary waves-effect')
+    	        $('#customSwitch1').addClass(' bg-info')
+    	        $('#customSwitch2').removeClass(' bg-info')
+    	        $('#customSwitch2').addClass(' badge-light-secondary')
+    	        $('#customSwitch1').removeClass(' badge-light-secondary')
     	      }
     	    });
     	  });
