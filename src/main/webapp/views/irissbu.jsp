@@ -92,7 +92,7 @@
 
   /* Custom class for green background */
   .green-background {
-    background-color: #a8d08c;
+    background-color: #fff;
   }
 
   /* Styling for input fields in 2nd and 5th columns */
@@ -104,7 +104,7 @@
     border: 1px solid #ccc;
     border-radius: 3px;
     box-sizing: border-box;
-    background-color: #a8d08c; /* Green background for input fields in 2nd and 5th columns */
+    background-color: #fff; /* Green background for input fields in 2nd and 5th columns */
     color: #333; /* Text color */
   }
 
@@ -182,7 +182,7 @@
         <td  colspan="6"></td>
       </tr>
        <tr>
-       <td colspan="6" style="background-color: #d0deef;text-align: center;">Fresh Water</td>
+<td colspan="6" style="background-color: #7492b7; text-align: center; color: white;">Fresh Water</td>
       </tr>
      
       <tr>
@@ -196,13 +196,13 @@
         
          <tr>
         <td style=" width: 18rem;" >Specific Fresh Water Consumption, in KL</td>
-         <td style=" width: 9rem;"><input type="text" style=" background-color: #fee599;"></td>  
+         <td style=" width: 9rem;"><input type="text" style=" background-color: gainsboro; "disabled></td>  
           <td style="width: 4rem;">KL/Ton</td>
            <td  colspan="4" ></td>
            </tr>
             
             <tr>
-            <td colspan="6" style="background-color: #d0deef;text-align: center;">Electrical Energy (within the facility)</td>
+            <td colspan="6" style="background-color: #7492b7;text-align: center; color: white;">Electrical Energy (within the facility)</td>
            </tr>
        
        <tr>
@@ -223,7 +223,7 @@
            
             <tr>
         <td style=" width: 18rem;" >Specific Electricity Consumption</td>
-         <td style="width: 9rem;"><input type="text"style=" background-color: #fee599;"></td>  
+         <td style="width: 9rem;"><input type="text"style=" background-color:gainsboro;"disabled></td>  
           <td style="width: 4rem;">kWh/ton</td>
            <td style="width: 19rem;">Reduction in Specific Electricity Consumption in FY 2024-25 compared to the Baseline FY 2023-24</td>
            <td style="width: 9rem;"><input type="text"></td> 
@@ -231,7 +231,7 @@
         </tr>
         
          <tr>
-            <td colspan="6" style="background-color: #d0deef;text-align: center;">Thermal Energy (within the facility)</td>
+            <td colspan="6" style="background-color: #7492b7;text-align: center; color: white;">Thermal Energy (within the facility)</td>
            </tr>
            
             <tr>
@@ -287,14 +287,14 @@
            
            <tr>
         <td style=" width: 18rem;" >Total Energy, in GJ</td>
-         <td style=" width: 9rem;"><input type="text" style=" background-color: #fee599;"></td>  
+         <td style=" width: 9rem;"><input type="text" style=" background-color:gainsboro; "disabled></td>  
           <td style="width: 4rem;">GJ</td>
            <td  colspan="4" ></td>
            </tr>
            
            <tr>
         <td style=" width: 18rem;" >Specific Thermal Energy Consumption, in GJ/ton (FY 2023-24)</td>
-         <td style=" width: 9rem;"><input type="text" style=" background-color: #fee599;"></td>  
+<td style="width: 9rem;"> <input type="text" style="background-color: gainsboro;" disabled></td>
           <td style="width: 4rem;">GJ/Ton</td>
            <td  colspan="4" ></td>
            </tr>
