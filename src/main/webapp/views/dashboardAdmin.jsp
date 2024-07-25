@@ -21,9 +21,11 @@
     <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//vendors/css/tables/datatable/buttons.bootstrap5.min.css">
     <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//vendors/css/tables/datatable/rowGroup.bootstrap5.min.css">
     <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//vendors/css/pickers/flatpickr/flatpickr.min.css">
+     <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/plugins/forms/pickers/form-flat-pickr.min.css">
+        <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/plugins/forms/pickers/form-pickadate.min.css">
     <!-- END: Vendor CSS-->
   <link rel="stylesheet" type="text/css" href="/nagpurCND/resources/css/plugins/forms/form-validation.css">
-    <!-- BEGIN: Theme CSS-->
+    <!-- BEGIN: Theme CSS--> 
     <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/bootstrap-extended.min.css">
     <link rel="stylesheet" type="text/css" href="/nagpurCND/resources//css/colors.min.css">
@@ -174,7 +176,7 @@ font-size: 1rem!important;
 
 <!-- Complex Headers -->
 <div class="content-header row">
-          <div class="content-header-left col-md-9 col-12 mb-2">
+          <div class="content-header-left col-md-6 col-12 mb-2">
             <div class="row breadcrumbs-top">
               <div class="col-12">
                 <h2 class="content-header-title float-start mb-0"><span class="badge bg-dark">Nagpur-CND <span class="badge badge-glow bg-info">DASHBOARD</span></span></h2>
@@ -182,12 +184,20 @@ font-size: 1rem!important;
               </div>
             </div>
           </div>
-          <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
-            <div class="mb-1 breadcrumb-right">
-              
-            </div>
+          
+           <div class="demo-inline-spacing  col-md-6 col-12">
+          
+         <div class="col-md-4 mb-4">
+		          <label class="form-label" for="fp-default">From Date</label>
+		          <input type="text" id="from_date" name="from_date" class="form-control flatpickr-basic flatpickr-input active" placeholder="YYYY-MM-DD" readonly="readonly">
+		        </div>
+		       <div class="col-md-4 mb-4">
+		          <label class="form-label" for="fp-default">To Date</label>
+		          <input type="text" id="to_date" name="to_date" class="form-control flatpickr-basic flatpickr-input active" placeholder="YYYY-MM-DD" readonly="readonly">
+		        </div>
+		        <a class="btn btn-gradient-dark text-white" onclick="exportCND();"><i data-feather='external-link'></i> Export</a>
           </div>
-        </div>
+          </div>
 
 <section id="card-style-variation">
   
@@ -282,8 +292,7 @@ font-size: 1rem!important;
       <p class="clearfix mb-0"><span class="float-md-start d-block d-md-inline-block mt-25">COPYRIGHT  &copy;  <span id="currentYear"></span> ,| Powered by<a class="ms-25" href="https://ramkyenviroengineers.com/" target="_blank">Re Sustainability Limited</a><span class="d-none d-sm-inline-block"> . All Rights Reserved.</span></span></p>
     </footer>
     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></button>
-   
-   
+
      <script src="/nagpurCND/resources/vendors/js/vendors.min.js"></script>
      <script src="/nagpurCND/resources/vendors/js/forms/select/select2.full.min.js"></script>
   
@@ -299,7 +308,13 @@ font-size: 1rem!important;
     <script src="/nagpurCND/resources//vendors/js/tables/datatable/buttons.html5.min.js"></script>
     <script src="/nagpurCND/resources//vendors/js/tables/datatable/buttons.print.min.js"></script>
     <script src="/nagpurCND/resources//vendors/js/tables/datatable/dataTables.rowGroup.min.js"></script>
-    <script src="/nagpurCND/resources//vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+    
+    <script src="/nagpurCND/resources/vendors/js/pickers/pickadate/picker.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/pickers/pickadate/picker.date.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/pickers/pickadate/picker.time.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/pickers/pickadate/legacy.js"></script>
+    <script src="/nagpurCND/resources/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+        <script src="/nagpurCND/resources/js/scripts/forms/pickers/form-pickers.min.js"></script>
     <!-- END: Page Vendor JS-->
       <script src="/nagpurCND/resources/js2/dataTables.material.min.js"  ></script>
           <script src="/nagpurCND/resources/js2/jquery.dataTables-v.1.10.min.js"  ></script>
@@ -319,13 +334,31 @@ font-size: 1rem!important;
     <!-- BEGIN: Page JS-->
     <script src="/nagpurCND/resources//js/scripts/tables/table-datatables-basic.min.js"></script>
 
-
-        
+             <form action="<%=request.getContextPath()%>/reone/export-cnd" name="exportCNDForm" id="exportCNDForm" target="_blank" method="post">	
+		        <input type="hidden" name=from_date id="exportfrom_date_filter" />
+		        <input type="hidden" name="to_date" id="exportto_date_filter" />
+			</form>
+   
         
          <form id="getIWM" class="row gy-1 pt-75" action="<%=request.getContextPath() %>/get-nagpurCND-details" method="post" class="form-horizontal" role="form" >
          	  <input type="hidden" id="idVal" name="id"  />
          </form>
     <script>
+    
+    
+    function exportCND(){
+    	 var from_date = $("#from_date").val();
+         var to_date = $("#to_date").val();
+		if(from_date != '' && from_date !=  null || to_date != ''  && to_date !=  null ){
+		  	 $("#exportfrom_date_filter").val(from_date);
+	     	 $("#exportto_date_filter").val(to_date);
+	     	 $("#exportCNDForm ").submit();
+		}else{
+			alert("Please Select a Date!")
+		}
+   
+  	}
+    
     document.addEventListener('DOMContentLoaded', function() {
     	  const countElements = document.querySelectorAll('.count');
     	  const duration = 2000; // Duration of the animation in milliseconds

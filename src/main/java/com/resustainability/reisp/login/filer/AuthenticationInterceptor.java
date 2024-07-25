@@ -37,7 +37,7 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter{
 			requestURI = request.getRequestURI();
 			UrlGenerator ugObj = new UrlGenerator();
 			context_path = ugObj.getContextPath();
-			if(requestURI.equals("/"+context_path+"/reone/getNagpurList") &&  !requestURI.equals("/"+context_path+"/login")) {
+			if(requestURI.equals("/"+context_path+"/reone/getNagpurList") &&  !requestURI.equals("/"+context_path+"/login") &&  !requestURI.equals("/"+context_path+"/reone/export-cnd")) {
 				 return true;
 			}
 			if(!request.getRequestURI().contains("@")){

@@ -14,6 +14,7 @@ import com.resustainability.reisp.model.AttOutputModel;
 import com.resustainability.reisp.model.BMW;
 import com.resustainability.reisp.model.BrainBox;
 import com.resustainability.reisp.model.DashBoardWeighBridge;
+import com.resustainability.reisp.model.IRM;
 import com.resustainability.reisp.model.SBU;
 
 @Service
@@ -60,5 +61,9 @@ public class BMWService {
 
 	public List<AttOutputModel> getAllAttendanceList(AttModelNormal obj1, AttOutputModel obj, HttpServletResponse response) throws SQLException {
 		return dao.getAllAttendanceList(obj1,obj,response);
+	}
+
+	public List<DashBoardWeighBridge> exportIRM(DashBoardWeighBridge obj) throws SQLException {
+		return dao.exportIRM(obj);
 	}
 }
