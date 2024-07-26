@@ -162,7 +162,6 @@ public class IRMDao {
 		}
 		return objsList;
 	}
-	static UrlGenerator ugObj = new UrlGenerator();
 	private String getUniqueID(IRM cObj) throws Exception {
 		Connection con = null;
 		PreparedStatement stmt = null;

@@ -528,30 +528,17 @@ try{
 					qry = qry + " AND (TRY_CAST([DATEOUT] AS date) between '"+outputDate+"' and '"+outputDate1+"') ";
 					arrSize++;
 			 }
-			 if(!StringUtils.isEmpty(obj) && !StringUtils.isEmpty(obj.getFrom_date())) {
-					qry = qry + "     and   DATEOUT =  "+outputDate+" 12:00:00 AM";
+			 else if(!StringUtils.isEmpty(obj) && !StringUtils.isEmpty(obj.getFrom_date())) {
+					qry = qry + "     and   DATEOUT =  '"+outputDate+" 12:00:00 AM'";
 					arrSize++;
 			 }
-			 if(!StringUtils.isEmpty(obj) && !StringUtils.isEmpty(obj.getTo_date())) {
-					qry = qry + "     and  DATEOUT = "+outputDate1+" 12:00:00 AM";
+			 else if(!StringUtils.isEmpty(obj) && !StringUtils.isEmpty(obj.getTo_date())) {
+					qry = qry + "     and  DATEOUT = '"+outputDate1+" 12:00:00 AM'";
 					arrSize++;
 			 }
 			qry = qry + " ORDER BY TRNO DESC "; 
-			  
-			Object[] pValues = new Object[arrSize];
-			int i = 0;
-			 if(!StringUtils.isEmpty(obj) && !StringUtils.isEmpty(obj.getFrom_date()) && !StringUtils.isEmpty(obj.getTo_date())) {
-				pValues[i++] = outputDate;
-				pValues[i++] = outputDate1;
-			}
-			if(!StringUtils.isEmpty(obj) && !StringUtils.isEmpty(obj.getFrom_date())) {
-				pValues[i++] = outputDate1;
-			}
-			if(!StringUtils.isEmpty(obj) && !StringUtils.isEmpty(obj.getTo_date())) {
-				pValues[i++] = obj.getTo_date();
-			}
-			
-			menuList = jdbcTemplate.query( qry,pValues, new BeanPropertyRowMapper<DashBoardWeighBridge>(DashBoardWeighBridge.class));
+
+			menuList = jdbcTemplate.query( qry, new BeanPropertyRowMapper<DashBoardWeighBridge>(DashBoardWeighBridge.class));
 
 		}catch(Exception e){ 
 			e.printStackTrace();

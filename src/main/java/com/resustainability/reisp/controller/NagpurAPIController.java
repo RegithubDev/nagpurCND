@@ -13,6 +13,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFCellStyle;
+import org.apache.poi.xssf.usermodel.XSSFColor;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 import org.apache.commons.codec.binary.Base64;
 import org.apache.log4j.Logger;
 import org.apache.poi.ss.usermodel.BorderStyle;
@@ -281,7 +286,11 @@ public class NagpurAPIController {
 		        byte[] greenRGB = new byte[]{(byte)146, (byte)208, (byte)80};
 		        byte[] redRGB = new byte[]{(byte)255, (byte)0, (byte)0};
 		        byte[] whiteRGB = new byte[]{(byte)255, (byte)255, (byte)255};
-		        
+		        byte[] colorRGB = new byte[]{
+		        	    (byte)0xD1, // Red component
+		        	    (byte)0xFE, // Green component
+		        	    (byte)0xFF  // Blue component
+		        	};
 		        boolean isWrapText = true;boolean isBoldText = true;boolean isItalicText = false; int fontSize = 11;String fontName = "Times New Roman";
 		        CellStyle blueStyle = cellFormating(workBook,blueRGB,HorizontalAlignment.CENTER,VerticalAlignment.CENTER,isWrapText,isBoldText,isItalicText,fontSize,fontName);
 		        CellStyle yellowStyle = cellFormating(workBook,yellowRGB,HorizontalAlignment.CENTER,VerticalAlignment.CENTER,isWrapText,isBoldText,isItalicText,fontSize,fontName);
@@ -290,13 +299,20 @@ public class NagpurAPIController {
 		        CellStyle whiteStyle = cellFormating(workBook,whiteRGB,HorizontalAlignment.CENTER,VerticalAlignment.CENTER,isWrapText,isBoldText,isItalicText,fontSize,fontName);
 		        
 		        CellStyle indexWhiteStyle = cellFormating(workBook,whiteRGB,HorizontalAlignment.LEFT,VerticalAlignment.CENTER,isWrapText,isBoldText,isItalicText,fontSize,fontName);
+		        CellStyle sectionStyleNumB = cellFormatingNum(workBook,colorRGB,HorizontalAlignment.CENTER,VerticalAlignment.CENTER,isWrapText,isBoldText,isItalicText,fontSize,fontName,"#,##0.00");
+		        CellStyle sectionStyleNum = cellFormatingNum(workBook,whiteRGB,HorizontalAlignment.CENTER,VerticalAlignment.CENTER,isWrapText,isBoldText,isItalicText,fontSize,fontName,"#,##0.00");
+
 		        
 		        isWrapText = true;isBoldText = false;isItalicText = false; fontSize = 9;fontName = "Times New Roman";
 		        CellStyle sectionStyle = cellFormating(workBook,whiteRGB,HorizontalAlignment.LEFT,VerticalAlignment.CENTER,isWrapText,isBoldText,isItalicText,fontSize,fontName);
-		        
+		     
+
+		        Double tareW = 0.0 ;
+		        Double secondW = 0.0 ;
+		        Double netW = 0.0 ;
 		        
 	            XSSFRow headingRow = sheet.createRow(0);
-	        	String headerString = "Incident Code,SBU,Project,Department,Description,Level,Risk,Date,Raised By" + 
+	        	String headerString = "VEHICLENO,Zone,Transfer Station,Date In (M/D/YYYY),Time In,Gross Weight,Tare Weight,Net Weight, Site,Date Out (M/D/YYYY),Time Out" + 
 	    				"";
 	            String[] firstHeaderStringArr = headerString.split("\\,");
 	            
@@ -313,9 +329,16 @@ public class NagpurAPIController {
 	            
 	                Cell cell = row.createCell(c++);
 					cell.setCellStyle(sectionStyle);
-					cell.setCellValue(obj1.getVEHICLENO());
+					cell.setCellValue(obj1.getVehicleNo());
 					
-
+					cell = row.createCell(c++);
+					cell.setCellStyle(sectionStyle);
+					cell.setCellValue (obj1.getMATERIAL());
+					
+					cell = row.createCell(c++);
+					cell.setCellStyle(sectionStyle);
+					cell.setCellValue (obj1.getPARTY());
+		
 					String date = obj1.getDATEIN();
 					try{
 						 if(date.contains(" ")){
@@ -335,13 +358,40 @@ public class NagpurAPIController {
 					cell.setCellStyle(sectionStyle);
 					cell.setCellValue (date);
 					
+				
+					
+					try{
+						 if(obj1.getTimeIN().contains(" ")){
+					            String [] finalDate = obj1.getTimeIN().split(" ", 2);
+					            date = finalDate[1];
+					        }
+					}catch(Exception e) {
+						date = obj1.getTimeIN();
+						if(date.contains(" ")){
+				            String [] finalDate = date.split(" ", 2);
+				            date = finalDate[1];
+				        }
+					}
 					cell = row.createCell(c++);
 					cell.setCellStyle(sectionStyle);
-					cell.setCellValue (obj1.getTimeIN());
+					cell.setCellValue (date);
 					
 					cell = row.createCell(c++);
-					cell.setCellStyle(sectionStyle);
-					cell.setCellValue (obj1.getFIRSTWEIGHT());
+					cell.setCellStyle(sectionStyleNum);
+					cell.setCellValue (Double.parseDouble(obj1.getFIRSTWEIGHT()));
+					tareW = tareW + Double.parseDouble(obj1.getFIRSTWEIGHT());
+					
+					
+					cell = row.createCell(c++);
+					cell.setCellStyle(sectionStyleNum);
+					cell.setCellValue (Double.parseDouble(obj1.getSECONDWEIGHT()));
+					secondW = secondW + Double.parseDouble(obj1.getSECONDWEIGHT());
+
+					cell = row.createCell(c++);
+					cell.setCellStyle(sectionStyleNum);
+					cell.setCellValue (Double.parseDouble(obj1.getNETWT()));
+					netW = netW + Double.parseDouble(obj1.getNETWT());
+
 					
 					  String dateO = obj1.getDATEOUT();
 						try{
@@ -357,19 +407,6 @@ public class NagpurAPIController {
 					        }
 						}
 						
-						cell = row.createCell(c++);
-						cell.setCellStyle(sectionStyle);
-						cell.setCellValue (dateO);
-						
-						cell = row.createCell(c++);
-						cell.setCellStyle(sectionStyle);
-						cell.setCellValue (obj1.getTimeOUT());
-						
-						cell = row.createCell(c++);
-						cell.setCellStyle(sectionStyle);
-						cell.setCellValue (obj1.getSECONDWEIGHT());
-						
-
 						if(StringUtils.isEmpty((obj1.getSiteID()))){
 							cell = row.createCell(c++);
 							cell.setCellStyle(sectionStyle);
@@ -380,9 +417,48 @@ public class NagpurAPIController {
 							cell.setCellValue (obj1.getSiteID());
 						}
 						
+						cell = row.createCell(c++);
+						cell.setCellStyle(sectionStyle);
+						cell.setCellValue (dateO);
+					
+						try{
+							 if(obj1.getTimeOUT().contains(" ")){
+						            String [] finalDate = obj1.getTimeOUT().split(" ", 2);
+						            date = finalDate[1];
+						        }
+						}catch(Exception e) {
+							date = obj1.getTimeOUT();
+							if(date.contains(" ")){
+					            String [] finalDate = date.split(" ", 2);
+					            date = finalDate[1];
+					        }
+						}
+						cell = row.createCell(c++);
+						cell.setCellStyle(sectionStyle);
+						cell.setCellValue (date);
 					
 	                rowNo++;
 	            }
+	            XSSFRow row1 = sheet.createRow(rowNo);
+
+	            for (int i = 0; i < firstHeaderStringArr.length; i++) {		
+	            	Cell cell = row1.createCell(i);
+	            	if(i == 5 ) {
+	            		cell.setCellStyle(sectionStyleNumB);
+	 					cell.setCellValue(tareW);
+	            	}else if( i == 6 ) {
+	            		cell.setCellStyle(sectionStyleNumB);
+	 					cell.setCellValue(secondW);
+	            	}else if( i == 7) {
+	            		cell.setCellStyle(sectionStyleNumB);
+	 					cell.setCellValue(netW);
+	            	}else {
+						cell.setCellStyle(sectionStyle);
+						cell.setCellValue ("");
+	            	}
+			       
+				}
+	            
 	            if(dataList.size() == 0) {
 	            	 XSSFRow row = sheet.createRow(rowNo);
 		                int c = 0;
@@ -392,11 +468,11 @@ public class NagpurAPIController {
 	            }
 	            for(int columnIndex = 0; columnIndex < firstHeaderStringArr.length; columnIndex++) {
 	        		sheet.setColumnWidth(columnIndex, 25 * 200);
-	        		sheet.setColumnWidth(4, 100 * 200);
+	        		sheet.setColumnWidth(2, 60 * 200);
 				}
                 DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd-HHmmss");
                 Date date = new Date();
-                String fileName = "IRM_"+dateFormat.format(date);
+                String fileName = "Nagpur_CnD_"+dateFormat.format(date);
                 
 	            try{
 	                /*FileOutputStream fos = new FileOutputStream(fileDirectory +fileName+".xls");
@@ -443,6 +519,43 @@ public class NagpurAPIController {
 		//return view;
 	}
 	
+
+	private CellStyle cellFormatingNum(XSSFWorkbook workBook, byte[] whiteRGB, HorizontalAlignment left,
+			VerticalAlignment center, boolean isWrapText, boolean isBoldText, boolean isItalicText, int fontSize,
+			String fontName, String string) {
+	    CellStyle style = workBook.createCellStyle();
+	    
+	    // Setting Background color
+	    style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+	    if (style instanceof XSSFCellStyle) {
+	        XSSFCellStyle xssfcellcolorstyle = (XSSFCellStyle) style;
+	        xssfcellcolorstyle.setFillForegroundColor(new XSSFColor(whiteRGB, null));
+	    }
+	    style.setBorderBottom(BorderStyle.MEDIUM);
+	    style.setBorderTop(BorderStyle.MEDIUM);
+	    style.setBorderLeft(BorderStyle.MEDIUM);
+	    style.setBorderRight(BorderStyle.MEDIUM);
+	    style.setAlignment(left);
+	    style.setVerticalAlignment(center);
+	    style.setWrapText(isWrapText);
+	    
+	    // Setting Font
+	    Font font = workBook.createFont();
+	    font.setFontHeightInPoints((short) fontSize);
+	    font.setFontName(fontName);
+	    font.setItalic(isItalicText);
+	    font.setBold(isBoldText);
+	    style.setFont(font);
+	    
+	    // Setting Number Format
+	    if (string != null && !string.isEmpty()) {
+	        DataFormat dataFormat = workBook.createDataFormat();
+	        style.setDataFormat(dataFormat.getFormat(string));
+	    }
+	    
+	    return style;
+	}
+
 
 	private CellStyle cellFormating(XSSFWorkbook workBook,byte[] rgb,HorizontalAlignment hAllign, VerticalAlignment vAllign, boolean isWrapText,boolean isBoldText,boolean isItalicText,int fontSize,String fontName) {
 		CellStyle style = workBook.createCellStyle();
