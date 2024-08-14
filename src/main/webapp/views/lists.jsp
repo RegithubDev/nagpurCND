@@ -331,7 +331,7 @@ font-size: 1rem!important;
 	        "iDisplayStart": 0,
 	        "fnDrawCallback": function () {},
 	        "initComplete": function () {
-	            $('.dataTables_filter input[type="search"]')
+	    /*         $('.dataTables_filter input[type="search"]')
 	                .attr('placeholder', 'Search')
 	                .css({
 	                    'width': '350px',
@@ -357,7 +357,7 @@ font-size: 1rem!important;
 
 	            $('.dataTables_filter').append('<div class="right-btns"></div>');
 	            $('.dataTables_filter div').append($searchButton, $clearButton);
-	            rowLen = $('#datatable-user tbody tr:visible').length
+	            rowLen = $('#datatable-user tbody tr:visible').length */
 	        },
 	        columnDefs: [{
 	            "targets": '',

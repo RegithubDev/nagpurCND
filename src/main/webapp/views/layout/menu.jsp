@@ -7,7 +7,6 @@
 <head>
 <meta charset="UTF-8">
 <title>menu</title>
- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style>
 
 
@@ -45,7 +44,7 @@ div.main-menu-content {
 					href="<%=request.getContextPath() %>/home"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="HomeOutlinedIcon"><path d="m12 5.69 5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3 2 12h3v8h6v-6h2v6h6v-8h3L12 3z"></path></svg><span
 				     		class="menu-title text-truncate" data-i18n="Email">Dashboard</span></a></li>
 				     		
-				<li class=" nav-item bghover active" id="list"><a class="d-flex align-items-center"
+				<li class=" nav-item bghover" id="list"><a class="d-flex align-items-center"
 					href="<%=request.getContextPath() %>/list"><i data-feather='list'></i><span
 				     		class="menu-title text-truncate" data-i18n="Email">Detail Table </span></a></li>
 				
@@ -58,23 +57,39 @@ div.main-menu-content {
 			</ul>
       <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 292px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
     </div>
-        <script>
-        var option = window.localStorage.getItem("selectedOption");
-        $( document ).ready(function() {
-       		var url = $(location).attr('href');
-       		if(option != 'undefined' && option != null){
-           		$('li.active').removeClass('active');
-           		if(url.indexOf('user') != -1){
-          			 $('#settings').addClass('active');
-	           		}else if(url.indexOf('nagpurCND-User') != -1 || url.indexOf('/update-irm-form') != -1){
-	           			$('#settings').addClass('active');
-	           		}else if(url.indexOf('list') != -1 || url.indexOf('/list') != -1){
-	           			$('#list').addClass('active');
-	           		}else{
-	           			$('#home').addClass('active');
-	           		}
-           	}
-        });
-        </script>
+      <script>
+$(document).ready(function() {
+    // Initial setting of active class based on the current URL
+    var url = $(location).attr('href');
+    var option = window.localStorage.getItem("selectedOption");
+
+    if(option != 'undefined' && option != null){
+        $('li.active').removeClass('active');
+        if(url.indexOf('user') != -1){
+            $('#settings').addClass('active');
+        } else if(url.indexOf('nagpurCND-User') != -1 || url.indexOf('/update-irm-form') != -1){
+            $('#settings').addClass('active');
+        } else if(url.indexOf('list') != -1 || url.indexOf('/list') != -1){
+            $('#list').addClass('active');
+        } else {
+            $('#home').addClass('active');
+        }
+    }
+
+    // Add click event listener to all `li` elements
+    $('ul#main-menu-navigation li').click(function() {
+        // Remove `active` class from all `li`
+        $('ul#main-menu-navigation li').removeClass('active');
+        
+        // Add `active` class to the clicked `li`
+        $(this).addClass('active');
+        
+        // Store the selected option in localStorage (optional)
+        var clickedOption = $(this).attr('id');
+        window.localStorage.setItem("selectedOption", clickedOption);
+    });
+});
+</script>
+
 </body>
 </html>
