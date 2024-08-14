@@ -15,6 +15,7 @@ import com.resustainability.reisp.model.BMW;
 import com.resustainability.reisp.model.BrainBox;
 import com.resustainability.reisp.model.DashBoardWeighBridge;
 import com.resustainability.reisp.model.IRM;
+import com.resustainability.reisp.model.DashBoardWeighBridge;
 import com.resustainability.reisp.model.SBU;
 
 @Service
@@ -65,5 +66,13 @@ public class BMWService {
 
 	public List<DashBoardWeighBridge> exportIRM(DashBoardWeighBridge obj) throws SQLException {
 		return dao.exportIRM(obj);
+	}
+
+	public int getTotalRecords(DashBoardWeighBridge obj, String searchParameter) throws SQLException {
+		return dao.getTotalRecords(obj,searchParameter);
+	}
+
+	public List<DashBoardWeighBridge> getIWMList(DashBoardWeighBridge obj, int startIndex, int offset, String searchParameter) throws SQLException {
+		return dao.getIWMList(obj,startIndex,offset,searchParameter);
 	}
 }

@@ -37,6 +37,18 @@ public class IwmUserController {
 		return model;
 	}
 	
+	@RequestMapping(value = "/list", method = {RequestMethod.POST, RequestMethod.GET})
+	public ModelAndView detailList(@ModelAttribute User user, HttpSession session) {
+		ModelAndView model = new ModelAndView(PageConstants.list);
+		SBU obj = null;
+		try {
+		
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return model;
+	}
 	
 	
 }

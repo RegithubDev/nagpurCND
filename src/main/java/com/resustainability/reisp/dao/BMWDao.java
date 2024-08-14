@@ -546,4 +546,147 @@ try{
 		}
 		return menuList;
 	}
+
+	public int getTotalRecords(DashBoardWeighBridge obj, String searchParameter) throws SQLException {
+		List<DashBoardWeighBridge> menuList = null;
+		int totalRecords = 0;
+		boolean flag = false;
+		int count = 0;
+		try{  
+			String user_id = "recgwbngpr";
+			String password = "X1298extvbddyzA";
+			//String Myip = Inet4Address.getLocalHost().getHostAddress();
+			String time = " 12:00:00AM";
+			int arrSize = 0;
+			String qry = "SELECT  count(UID) FROM [All_CnD_Sites].[dbo].[WEIGHT] where SITEID = 'NAGPURCND_WB1' ";
+			 if(!StringUtils.isEmpty(obj) && !StringUtils.isEmpty(obj.getFrom_date()) && !StringUtils.isEmpty(obj.getTo_date())) {
+					 String fromDate = obj.getFrom_date();
+					   String toDate = obj.getTo_date();
+				     DateTimeFormatter inputFormatterO = DateTimeFormatter.ofPattern("M/d/yyyy");
+				     DateTimeFormatter outputFormatterI = DateTimeFormatter.ofPattern("yyyy-M-d");
+				     
+				     LocalDate date = LocalDate.parse(fromDate, outputFormatterI);
+				     LocalDate date1 = LocalDate.parse(toDate, outputFormatterI);
+				      
+				      // Format the LocalDate object to the desired output string
+				     String outputDate  = null;
+				      String outputDate1 = null;
+				     if(!StringUtils.isEmpty(obj) && !StringUtils.isEmpty(obj.getFrom_date()) && !StringUtils.isEmpty(obj.getTo_date())) {
+				    	   outputDate = date.format(inputFormatterO);
+					       outputDate1 = date1.format(inputFormatterO);
+				     }
+					 if(!StringUtils.isEmpty(obj) && !StringUtils.isEmpty(obj.getFrom_date()) && !StringUtils.isEmpty(obj.getTo_date())) {
+							qry = qry + " AND (TRY_CAST([DATEOUT] AS date) between '"+outputDate+"' and '"+outputDate1+"') ";
+							arrSize++;
+					 }
+					 else if(!StringUtils.isEmpty(obj) && !StringUtils.isEmpty(obj.getFrom_date())) {
+							qry = qry + "     and   DATEOUT =  '"+outputDate+" 12:00:00 AM'";
+							arrSize++;
+					 }
+					 else if(!StringUtils.isEmpty(obj) && !StringUtils.isEmpty(obj.getTo_date())) {
+							qry = qry + "     and  DATEOUT = '"+outputDate1+" 12:00:00 AM'";
+							arrSize++;
+					 }
+			 }
+					qry = qry + " "; 
+
+					totalRecords = jdbcTemplate.queryForObject( qry,Integer.class);
+
+				}catch(Exception e){ 
+					e.printStackTrace();
+					throw new SQLException(e.getMessage());
+				}
+				return totalRecords;
+	}
+
+	public List<DashBoardWeighBridge> getIWMList(DashBoardWeighBridge obj, int startIndex, int offset,
+			String searchParameter) throws SQLException {
+		List<DashBoardWeighBridge> menuList = null;
+		boolean flag = false;
+		int count = 0;
+		try{  
+			String user_id = "recgwbngpr";
+			String password = "X1298extvbddyzA";
+			//String Myip = Inet4Address.getLocalHost().getHostAddress();
+			String time = " 12:00:00AM";
+			int arrSize = 0;
+			String qry = "SELECT  [UID]\r\n"
+					+ "      ,[TRNO]\r\n"
+					+ "      ,[VEHICLENO]\r\n"
+					+ "      ,[MATERIAL]\r\n"
+					+ "      ,[PARTY]\r\n"
+					+ "      ,[TRANSPORTER]\r\n"
+					+ "      ,[BILLDCNO]\r\n"
+					+ "      ,[BILLWEIGHT]\r\n"
+					+ "      ,[DATEIN]\r\n"
+					+ "      ,[TIMEIN]\r\n"
+					+ "      ,[FIRSTWEIGHT]\r\n"
+					+ "      ,[USER1]\r\n"
+					+ "      ,[DATEOUT]\r\n"
+					+ "      ,[TIMEOUT]\r\n"
+					+ "      ,[SECONDWEIGHT]\r\n"
+					+ "      ,[USER2]\r\n"
+					+ "      ,[SITEID]\r\n"
+					+ "      ,[STATUS]\r\n"
+					+ "      ,[FIRSTFRONTPOTO]\r\n"
+					+ "      ,[FIRSTBACKPOTO]\r\n"
+					+ "      ,[SECONDFRONTPOTO]\r\n"
+					+ "      ,[SECONDBACKPOTO]\r\n"
+					+ "      ,[NETWT]\r\n"
+					+ "      ,[SW_SITEID]\r\n"
+					+ "      ,[TRIPNO]\r\n"
+					+ "      ,[SHIFTNO]\r\n"
+					+ "      ,[TRANSFERWASTEIE]\r\n"
+					+ "      ,[TRANSFERWASTE]\r\n"
+					+ "      ,[MANIFESTNUMBER]\r\n"
+					+ "      ,[MANIFESTWEIGHT]\r\n"
+					+ "      ,[MEMBERSHIPCODE]\r\n"
+					+ "      ,[INGATEPASSNO]\r\n"
+					+ "      ,[INMETERREADING]\r\n"
+					+ "      ,[TRANSFERID]\r\n"
+					+ "      ,[OUTGATEPASSNO]\r\n"
+					+ "      ,[OUTMETERREADING]\r\n"
+					+ "      ,[TYPEOFWASTE]\r\n"
+					+ "      ,[TOTALKMSTRAVELLED]\r\n"
+					+ "      ,[BILLABLEWEIGHT]\r\n"
+					+ "      ,[TOTALTRANSPORTCHARGES]\r\n"
+					+ "      ,[BARCODENUM]\r\n"
+					+ "      ,[REMARKS]\r\n"
+					+ "      ,[CONTAINERID]\r\n"
+							+ "  FROM [All_CnD_Sites].[dbo].[WEIGHT] where SITEID = 'NAGPURCND_WB1' ";
+			 if(!StringUtils.isEmpty(obj) && !StringUtils.isEmpty(obj.getFrom_date()) && !StringUtils.isEmpty(obj.getTo_date())) {
+					 String fromDate = obj.getFrom_date();
+					 String toDate = obj.getTo_date();
+				     DateTimeFormatter inputFormatterO = DateTimeFormatter.ofPattern("M/d/yyyy");
+				     DateTimeFormatter outputFormatterI = DateTimeFormatter.ofPattern("yyyy-M-d");
+				     
+				     LocalDate date = LocalDate.parse(fromDate, outputFormatterI);
+				     LocalDate date1 = LocalDate.parse(toDate, outputFormatterI);
+				      
+				      // Format the LocalDate object to the desired output string
+				      String outputDate = date.format(inputFormatterO);
+				      String outputDate1 = date1.format(inputFormatterO);
+					 if(!StringUtils.isEmpty(obj) && !StringUtils.isEmpty(obj.getFrom_date()) && !StringUtils.isEmpty(obj.getTo_date())) {
+							qry = qry + " AND (TRY_CAST([DATEOUT] AS date) between '"+outputDate+"' and '"+outputDate1+"') ";
+							arrSize++;
+					 }
+					 else if(!StringUtils.isEmpty(obj) && !StringUtils.isEmpty(obj.getFrom_date())) {
+							qry = qry + "     and   DATEOUT =  '"+outputDate+" 12:00:00 AM'";
+							arrSize++;
+					 }
+					 else if(!StringUtils.isEmpty(obj) && !StringUtils.isEmpty(obj.getTo_date())) {
+							qry = qry + "     and  DATEOUT = '"+outputDate1+" 12:00:00 AM'";
+							arrSize++;
+					 }
+			 }
+					qry = qry + " ORDER BY TRNO DESC  offset "+startIndex+" rows  fetch next "+offset+" rows only";	
+
+					menuList = jdbcTemplate.query( qry, new BeanPropertyRowMapper<DashBoardWeighBridge>(DashBoardWeighBridge.class));
+
+				}catch(Exception e){ 
+					e.printStackTrace();
+					throw new SQLException(e.getMessage());
+				}
+				return menuList;
+	}
 }

@@ -12,6 +12,7 @@ public class PageConstants {
 	public static final String iriscity = "iriscity";
 	public static final String irisrole = "irisrole";
 	public static final String iwmuser = "iwmuser";	
+	public static final String list = "lists";	
 	public static final String irisdatamanagement = "irisdatamanagement";	
 	public static final String irisaccountinfo = "irisadduser2";	
 
