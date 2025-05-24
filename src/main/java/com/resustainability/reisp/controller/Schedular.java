@@ -33,6 +33,7 @@ import org.springframework.web.bind.annotation.InitBinder;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.resustainability.reisp.common.DateParser;
+import com.resustainability.reisp.common.EMailSender;
 import com.resustainability.reisp.model.DashBoardWeighBridge;
 import com.resustainability.reisp.model.IWM;
 import com.resustainability.reisp.service.DashBoardWeighBridgeService;
@@ -64,5 +65,25 @@ public class Schedular {
 	DashBoardWeighBridgeService service;
 
 	/**********************************************************************************/
-	
+	@Scheduled(cron = "${cron.expression.sending.alert.mails.by.alert.type}")
+	public void UserActivityCheck(){	
+		if(is_cron_jobs_enabled || is_cron_jobs_enabled_in_qa) {
+		     logger.error("userLoginTimeout : Method executed every day. Current time is :"+ new Date());	    
+		     try {
+		    	 System.out.println("cronJob ActivityCheck!!!!"); 
+		    	 boolean flag = true;
+		    	 EMailSender email = new EMailSender();
+		    	 email.send("saidileep.p@resustainability.com", "Test- Subject", "body", null, "Test- Subject2");
+		    	 
+		    		 if(is_cron_jobs_enabled || is_cron_jobs_enabled_in_qa) {
+		    			 System.out.println("cronJob ActivityCheck!!!!"); 
+					    	 //service.getIRMListAlert();
+							logger.error("getIRMListAlert >> Sent mails : "+ flag); 
+				    	}
+			 } catch (Exception e) {
+				 e.printStackTrace();
+				logger.error("monthlyAlerts() : "+e.getMessage());
+			 }
+		}
+	}
 }

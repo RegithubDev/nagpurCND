@@ -36,7 +36,7 @@ private static Logger logger = Logger.getLogger(EMailSender.class);
 
 	/************** G Mail Server Credentials**************************************/
 	private static String mailId = "businessapps.appworks@resustainability.com";
-	private static String pass = "AppsAdmin@54321";
+	private static String pass = "Appmint@321";
 	
 	public static Session getSession() {
 		Properties prop = new Properties();
